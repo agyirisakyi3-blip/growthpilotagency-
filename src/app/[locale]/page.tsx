@@ -1,0 +1,50 @@
+import { getTranslations } from "next-intl/server";
+import dynamic from "next/dynamic";
+import { Hero } from "@/components/home/Hero";
+import { Services } from "@/components/home/Services";
+import { ServiceBanner } from "@/components/home/ServiceBanner";
+import { SectionWave } from "@/components/features/section-divider";
+
+const Results = dynamic(() => import("@/components/home/Results").then((m) => ({ default: m.Results })));
+const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs").then((m) => ({ default: m.WhyChooseUs })));
+const Industries = dynamic(() => import("@/components/home/Industries").then((m) => ({ default: m.Industries })));
+const CaseStudies = dynamic(() => import("@/components/home/CaseStudies").then((m) => ({ default: m.CaseStudies })));
+const SeoAudit = dynamic(() => import("@/components/home/SeoAudit").then((m) => ({ default: m.SeoAudit })));
+const Testimonials = dynamic(() => import("@/components/home/Testimonials").then((m) => ({ default: m.Testimonials })));
+const About = dynamic(() => import("@/components/home/About").then((m) => ({ default: m.About })));
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "hero" });
+  return {
+    title: "GrowthPilot Agency | SEO, Websites & AI Automation Agency",
+    description: t("metaDescription"),
+    alternates: { canonical: `/${locale}` },
+    openGraph: {
+      url: `https://growthpilotagency.com/${locale}`,
+    },
+  };
+}
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <Services />
+      <ServiceBanner />
+      <SectionWave flip />
+      <Results />
+      <SectionWave />
+      <WhyChooseUs />
+      <Industries />
+      <SectionWave flip />
+      <CaseStudies />
+      <SeoAudit />
+      <SectionWave />
+      <Testimonials />
+      <About />
+    </>
+  );
+}

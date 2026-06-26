@@ -1,0 +1,111 @@
+"use server";
+
+import { createElement } from "react";
+import { render } from "@react-email/render";
+import { prisma } from "@/lib/prisma";
+import { sendEmail } from "@/lib/email";
+import { NewLeadNotificationEmail } from "@/emails";
+import { verifySession } from "@/lib/admin-auth";
+import { leadSchema } from "@/lib/validations/email";
+
+
+export async function submitLead(formData: FormData) {
+  const raw = {
+    name: formData.get("name") as string,
+    email: formData.get("email") as string,
+    phone: formData.get("phone") as string,
+    company: formData.get("company") as string,
+    website: formData.get("website") as string,
+    message: formData.get("message") as string,
+  };
+
+  const parsed = leadSchema.safeParse(raw);
+  if (!parsed.success) {
+    return { success: false, message: parsed.error.issues[0].message };
+  }
+
+  const { name, email, phone, company, website, message } = parsed.data;
+
+  try {
+    await prisma.lead.create({
+      data: {
+        name,
+        email,
+        phone,
+        company,
+        website,
+        message: message || "",
+        status: "new",
+        source: "seo-audit",
+      },
+    });
+
+    const adminEmail = process.env.ADMIN_EMAIL || process.env.EMAIL_TO || "agyirisakyi3@gmail.com";
+
+    const html = await render(createElement(NewLeadNotificationEmail, {
+      name,
+      email,
+      company,
+      phone: phone || undefined,
+      message: message || "SEO audit requested via website form",
+    }));
+
+    await sendEmail({ to: adminEmail, subject: `New SEO Audit Lead: ${name} - ${company}`, html });
+
+    return {
+      success: true,
+      message:
+        "Thank you! We'll review your website and send your free SEO audit report within 24 hours.",
+    };
+  } catch (error) {
+    console.error("Failed to submit lead:", error);
+    return {
+      success: false,
+      message: "Something went wrong. Please try again.",
+    };
+  }
+}
+
+export async function getLeads() {
+  if (!(await verifySession())) {
+    return { success: false, data: [] };
+  }
+  try {
+    const leads = await prisma.lead.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+    return { success: true, data: leads };
+  } catch (error) {
+    console.error("Failed to fetch leads:", error);
+    return { success: false, data: [] };
+  }
+}
+
+export async function deleteLead(id: string) {
+  if (!(await verifySession())) {
+    return { success: false };
+  }
+  try {
+    await prisma.lead.delete({ where: { id } });
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to delete lead:", error);
+    return { success: false };
+  }
+}
+
+export async function updateLeadStatus(id: string, status: string) {
+  if (!(await verifySession())) {
+    return { success: false };
+  }
+  try {
+    await prisma.lead.update({
+      where: { id },
+      data: { status },
+    });
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to update lead status:", error);
+    return { success: false };
+  }
+}

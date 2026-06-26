@@ -1,0 +1,1005 @@
+{
+  "nav": {
+    "services": "Services",
+    "results": "Résultats",
+    "caseStudies": "Études de Cas",
+    "team": "Équipe",
+    "contact": "Contact",
+    "freeSeoAudit": "Audit SEO Gratuit",
+    "getFreeSeoAudit": "Obtenir un Audit SEO Gratuit",
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "home": "GrowthPilot Agency - Accueil"
+  },
+  "hero": {
+    "metaDescription": "Nous aidons les entreprises à se développer plus rapidement grâce au SEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp. Obtenez plus de leads, de clients et de ventes.",
+    "previous": "Diapositive précédente",
+    "next": "Diapositive suivante",
+    "slide": "Diapositive",
+    "noCommitment": "Sans engagement",
+    "freeStrategyReport": "Rapport stratégique gratuit",
+    "turnaround": "Livraison sous 24h",
+    "slides": [
+      {
+        "badge": "Services SEO",
+        "headline1": "Dominez les Résultats de Recherche",
+        "headline2": "Générez du Trafic Organique",
+        "headline3": "& des Leads Qualifiés",
+        "description": "Des stratégies SEO basées sur les données qui placent votre entreprise en première page et génèrent des leads qualifiés en continu.",
+        "cta": "Améliorez Votre Classement",
+        "cta2": "En Savoir Plus"
+      },
+      {
+        "badge": "Conception de Sites Web",
+        "headline1": "Sites Web à Fort Taux de Conversion",
+        "headline2": "Modernes & Rapides",
+        "headline3": "Conçus pour Captiver",
+        "description": "Des sites web sur mesure construits avec des technologies de pointe qui transforment les visiteurs en clients.",
+        "cta": "Voir Nos Réalisations",
+        "cta2": "Contactez-Nous"
+      },
+      {
+        "badge": "Automatisation IA",
+        "headline1": "Automatisation Intelligente",
+        "headline2": "Gagnez du Temps",
+        "headline3": "& Développez-vous Plus Vite",
+        "description": "Des flux de travail pilotés par l'IA qui rationalisent vos opérations et libèrent votre équipe pour se concentrer sur la croissance.",
+        "cta": "Automatisez Maintenant",
+        "cta2": "Voir Comment"
+      },
+      {
+        "badge": "Automatisation WhatsApp",
+        "headline1": "Automatisez les Conversations",
+        "headline2": "Concluez Plus d'Affaires",
+        "headline3": "sur WhatsApp",
+        "description": "Communication client automatisée et nurturing de leads via la portée massive de WhatsApp.",
+        "cta": "Démarrer la Conversation",
+        "cta2": "En Savoir Plus"
+      },
+      {
+        "badge": "Génération de Leads",
+        "headline1": "Remplissez Votre Pipeline",
+        "headline2": "Leads Qualifiés",
+        "headline3": "Prêts à Convertir",
+        "description": "Campagnes multicanal qui livrent des prospects de haute qualité directement dans votre boîte de réception.",
+        "cta": "Obtenez des Leads",
+        "cta2": "Réservez un Appel"
+      }
+    ]
+  },
+  "services": {
+    "badge": "Nos Services",
+    "title": "Tout ce dont Vous Avez Besoin pour",
+    "highlight": "Grandir en Ligne",
+    "description": "Du SEO à l'automatisation IA, nous fournissons des solutions de croissance numérique de bout en bout adaptées à votre entreprise.",
+    "list": [
+      {
+        "title": "Services SEO",
+        "description": "Dominez les classements de recherche avec des stratégies SEO basées sur les données qui génèrent du trafic organique et des leads qualifiés.",
+        "benefits": [
+          "Recherche & stratégie de mots-clés",
+          "SEO on-page & technique",
+          "Netlinking & autorité",
+          "Stratégie de contenu"
+        ],
+        "cta": "Améliorez Votre Classement",
+        "slug": "seo-services",
+        "detailedDescription": "Nos services SEO sont basés sur les données, pas sur les suppositions. Nous effectuons une recherche approfondie de mots-clés, des audits techniques de site et une analyse concurrentielle pour créer une stratégie personnalisée qui place votre entreprise en première page de Google. De l'optimisation on-page au netlinking d'autorité, chaque tactique est conçue pour générer une croissance organique mesurable.",
+        "process": [
+          { "step": "Découverte & Audit", "description": "Nous analysons votre site web, vos concurrents et votre marché cible pour identifier les opportunités et les lacunes." },
+          { "step": "Développement de la Stratégie", "description": "Une feuille de route SEO personnalisée construite autour de mots-clés à forte valeur, de correctifs techniques et d'opportunités de contenu." },
+          { "step": "Optimisation On-Page", "description": "Balises meta, optimisation du contenu, maillage interne et mise en œuvre du balisage schema." },
+          { "step": "SEO Technique", "description": "Vitesse du site, convivialité mobile, optimisation du crawl et amélioration des Core Web Vitals." },
+          { "step": "Netlinking & Autorité", "description": "Obtenez des backlinks de haute qualité grâce aux relations publiques numériques, aux articles invités et au marketing de contenu." },
+          { "step": "Suivi & Reporting", "description": "Rapports mensuels transparents avec classements de mots-clés, données de trafic et informations actionnables." }
+        ],
+        "faq": [
+          { "q": "Combien de temps faut-il pour voir les résultats du SEO ?", "a": "La plupart des clients constatent des améliorations significatives en 3 à 6 mois. Cependant, les premiers gains comme les correctifs techniques et les optimisations SEO locales peuvent montrer un impact en 4 à 6 semaines." },
+          { "q": "Garantissez-vous les classements en page 1 ?", "a": "Aucune agence réputée ne peut garantir la première place, car l'algorithme de Google est complexe et en constante évolution. Nous garantissons des stratégies basées sur les données, des rapports transparents et une optimisation continue pour maximiser votre potentiel de classement." },
+          { "q": "Dans quels secteurs êtes-vous spécialisé ?", "a": "Nous travaillons dans les secteurs juridique, assurance, santé, immobilier, hôtellerie, éducation et e-commerce. Nos stratégies sont adaptées au paysage concurrentiel unique de chaque secteur." }
+        ]
+      },
+      {
+        "title": "Conception de Sites Web",
+        "description": "Des sites web modernes à fort taux de conversion, construits avec une technologie de pointe qui captive et convertit.",
+        "benefits": [
+          "Développement Next.js personnalisé",
+          "Responsive & mobile-first",
+          "Structure optimisée SEO",
+          "Chargement rapide & accessible"
+        ],
+        "cta": "Obtenez Votre Site",
+        "slug": "website-design",
+        "detailedDescription": "Votre site web est votre vitrine numérique. Nous construisons des sites web haute performance utilisant Next.js et des frameworks modernes qui chargent instantanément, se classent mieux sur Google et convertissent les visiteurs en clients. Chaque site que nous construisons est entièrement responsive, accessible et optimisé pour la meilleure expérience utilisateur sur tous les appareils.",
+        "process": [
+          { "step": "Découverte & Planification", "description": "Nous découvrons votre marque, votre audience et vos objectifs pour créer un plan de projet détaillé." },
+          { "step": "Design & Prototypage", "description": "Wireframes et maquettes haute fidélité conçus avec les meilleures pratiques UX et votre identité de marque." },
+          { "step": "Développement", "description": "Code propre et modulaire utilisant Next.js, TypeScript et Tailwind CSS pour la performance et la maintenabilité." },
+          { "step": "Intégration du Contenu", "description": "Textes, images et médias intégrés avec une structure SEO-friendly et des métadonnées." },
+          { "step": "Tests & Assurance Qualité", "description": "Tests multi-navigateurs, audits de performance, vérifications d'accessibilité et corrections de bugs." },
+          { "step": "Lancement & Transfert", "description": "Déploiement, configuration des analytics et documentation. Maintenance continue disponible." }
+        ],
+        "faq": [
+          { "q": "Combien de temps faut-il pour construire un site web ?", "a": "Un site web professionnel de 5 pages prend généralement 2 à 4 semaines. Les projets plus complexes avec des fonctionnalités personnalisées peuvent prendre 6 à 10 semaines." },
+          { "q": "Mon site web sera-t-il adapté aux mobiles ?", "a": "Absolument. Chaque site que nous construisons est mobile-first et entièrement responsive, garantissant une expérience parfaite sur téléphones, tablettes et ordinateurs." },
+          { "q": "Proposez-vous l'hébergement et la maintenance ?", "a": "Oui. Nous proposons des forfaits de maintenance et de support continus incluant l'hébergement, les mises à jour de sécurité, les sauvegardes et le support prioritaire." }
+        ]
+      },
+      {
+        "title": "Automatisation IA",
+        "description": "Optimisez votre entreprise avec des automatisations intelligentes basées sur l'IA qui font gagner du temps et boostent l'efficacité.",
+        "benefits": [
+          "Automatisation des flux de travail",
+          "Développement de chatbots",
+          "Génération de contenu IA",
+          "Optimisation des processus"
+        ],
+        "cta": "Automatisez Maintenant",
+        "slug": "ai-automation",
+        "detailedDescription": "L'automatisation basée sur l'IA transforme la façon dont les entreprises fonctionnent. Nous concevons et mettons en œuvre des systèmes intelligents qui gèrent les tâches répétitives, génèrent du contenu, gèrent les interactions clients et optimisent vos flux de travail. Des chatbots personnalisés aux pipelines de reporting automatisés, nous vous aidons à faire plus avec moins.",
+        "process": [
+          { "step": "Audit des Processus", "description": "Nous cartographions vos flux de travail actuels pour identifier les opportunités d'automatisation à fort impact." },
+          { "step": "Conception de la Solution", "description": "Architecturer les bons outils d'IA et d'automatisation pour vos besoins spécifiques." },
+          { "step": "Développement & Intégration", "description": "Construire et intégrer des solutions d'IA avec vos outils et plateformes existants." },
+          { "step": "Tests & Formation", "description": "Tests rigoureux et formation de l'équipe pour garantir une adoption et un fonctionnement fluides." },
+          { "step": "Suivi & Optimisation", "description": "Surveillance continue et amélioration pour maximiser l'efficacité et le ROI." }
+        ],
+        "faq": [
+          { "q": "Que peut faire l'automatisation IA pour mon entreprise ?", "a": "L'IA peut gérer le support client (chatbots), générer du contenu, automatiser les séquences d'emails, scorer les leads, planifier les rendez-vous, générer des rapports et bien plus encore." },
+          { "q": "Ai-je besoin de compétences techniques pour utiliser ces outils ?", "a": "Non. Nous construisons des systèmes conviviaux avec des interfaces simples. Nous fournissons également une formation et une documentation pour que votre équipe puisse gérer les opérations quotidiennes." },
+          { "q": "Avec quels outils et plateformes travaillez-vous ?", "a": "Nous nous intégrons avec des outils populaires comme Zapier, Make, OpenAI, Google Workspace, Slack, CRM et des API personnalisées pour connecter l'ensemble de votre stack technologique." }
+        ]
+      },
+      {
+        "title": "Automatisation WhatsApp",
+        "description": "Automatisez la communication client et le nurturing de leads directement via la portée massive de WhatsApp.",
+        "benefits": [
+          "Systèmes de réponse automatique",
+          "Campagnes de diffusion",
+          "Qualification de leads",
+          "Intégration CRM"
+        ],
+        "cta": "Démarrer la Conversation",
+        "slug": "whatsapp-automation",
+        "detailedDescription": "WhatsApp est la plateforme de messagerie la plus utilisée en Afrique de l'Ouest. Nous aidons les entreprises à automatiser leur communication WhatsApp — des réponses automatiques instantanées et la qualification intelligente des leads aux campagnes de diffusion et à l'intégration CRM complète. Ne manquez plus jamais un lead.",
+        "process": [
+          { "step": "Collecte des Exigences", "description": "Nous analysons vos besoins de communication, votre volume et vos flux de travail existants." },
+          { "step": "Conception du Système", "description": "Conception de flux de réponses automatisées, de logique de qualification des leads et de séquences de diffusion." },
+          { "step": "Intégration API", "description": "Connexion de l'API WhatsApp Business avec votre CRM et autres outils professionnels." },
+          { "step": "Tests & Lancement", "description": "Tests de bout en bout de tous les flux, messages et intégrations avant la mise en service." },
+          { "step": "Analytique & Perfectionnement", "description": "Surveillance des taux de réponse, des métriques de conversion et optimisation continue des performances." }
+        ],
+        "faq": [
+          { "q": "S'agit-il de l'API WhatsApp officielle ?", "a": "Oui. Nous utilisons l'API WhatsApp Business officielle, qui est fiable, sécurisée et conforme aux conditions d'utilisation de WhatsApp." },
+          { "q": "Puis-je toujours répondre manuellement si nécessaire ?", "a": "Oui. Le système gère les demandes initiales et les réponses courantes automatiquement, mais vous pouvez reprendre les conversations à tout moment." },
+          { "q": "Avec quel CRM intégrez-vous ?", "a": "Nous nous intégrons avec des CRM populaires comme HubSpot, Salesforce, Pipedrive et des solutions personnalisées, assurant que vos leads circulent parfaitement dans votre pipeline de vente." }
+        ]
+      },
+      {
+        "title": "Génération de Leads",
+        "description": "Campagnes de génération de leads multicanal qui remplissent votre pipeline de prospects de haute qualité prêts à convertir.",
+        "benefits": [
+          "Campagnes ciblées",
+          "Entonnoirs de pages de destination",
+          "Emailing",
+          "Suivi des conversions"
+        ],
+        "cta": "Obtenez des Leads",
+        "slug": "lead-generation",
+        "detailedDescription": "Arrêtez de courir après les leads — laissez-les venir à vous. Nos stratégies de génération de leads multicanal combinent des campagnes publicitaires ciblées, des pages de destination à fort taux de conversion, des campagnes email et des suivis automatisés pour remplir votre pipeline de prospects qualifiés prêts à acheter.",
+        "process": [
+          { "step": "Analyse de l'Audience Cible", "description": "Définir le profil de votre client idéal et identifier les meilleurs canaux pour l'atteindre." },
+          { "step": "Stratégie de Campagne", "description": "Plan multicanal combinant publicités payantes, marketing de contenu, email et outreach." },
+          { "step": "Création de Pages de Destination & Entonnoirs", "description": "Pages de destination et séquences email/SMS automatisées à fort taux de conversion pour nourrir les leads." },
+          { "step": "Lancement de la Campagne", "description": "Exécuter les campagnes sur les canaux sélectionnés avec un ciblage et des budgets précis." },
+          { "step": "Suivi & Optimisation", "description": "Surveillance en temps réel, tests A/B et optimisation continue pour un ROI maximal." }
+        ],
+        "faq": [
+          { "q": "À combien de leads puis-je m'attendre ?", "a": "Les résultats varient selon le secteur et le budget, mais nos clients constatent généralement une augmentation de 200 à 400 % des leads qualifiés dans les 60 premiers jours." },
+          { "q": "Quels canaux utilisez-vous ?", "a": "Nous utilisons une combinaison de Google Ads, publicités Facebook/Instagram, outreach LinkedIn, email marketing, SEO et campagnes WhatsApp en fonction de votre audience cible." },
+          { "q": "Comment qualifiez-vous les leads ?", "a": "Nous utilisons une qualification en plusieurs étapes incluant des champs de formulaire, un scoring automatisé et un suivi comportemental pour vous assurer de ne recevoir que des prospects à forte intention." }
+        ]
+      },
+      {
+        "title": "SEO Local",
+        "description": "Dominez les résultats de recherche locaux et Google Maps pour attirer plus de clients à proximité de votre entreprise.",
+        "benefits": [
+          "Profil Google Business",
+          "Citations locales",
+          "Gestion des avis",
+          "Stratégie de contenu local"
+        ],
+        "cta": "Devenez Local",
+        "slug": "local-seo",
+        "detailedDescription": "Si vous servez des clients dans une zone géographique spécifique, le SEO Local est votre canal de croissance le plus puissant. Nous optimisons votre profil Google Business, construisons des citations locales, gérons les avis et créons du contenu spécifique à la localisation pour garantir que votre entreprise apparaît en haut des résultats de recherche locaux et de Google Maps.",
+        "process": [
+          { "step": "Audit Local", "description": "Examen complet de votre présence actuelle dans les recherches locales et du paysage concurrentiel." },
+          { "step": "Optimisation du Profil Google Business", "description": "Optimisation complète de votre GBP avec des informations précises, catégories, photos et publications." },
+          { "step": "Construction de Citations", "description": "Construire et standardiser vos listes d'entreprise dans les principaux annuaires et plateformes." },
+          { "step": "Gestion des Avis", "description": "Stratégie pour générer des avis positifs et gérer professionnellement les retours négatifs." },
+          { "step": "Contenu Local & Suivi", "description": "Création de contenu spécifique à la localisation et suivi continu des classements pour les mots-clés locaux." }
+        ],
+        "faq": [
+          { "q": "Combien de temps prend le SEO Local ?", "a": "Les améliorations du SEO Local peuvent montrer des résultats en 4 à 8 semaines, en particulier les optimisations du profil Google Business et le nettoyage des citations." },
+          { "q": "Travaillez-vous avec des entreprises multi-sites ?", "a": "Oui. Nous avons des stratégies pour les entreprises avec plusieurs emplacements, incluant des pages optimisées pour chaque site et du netlinking local." },
+          { "q": "Qu'est-ce qui est inclus dans l'optimisation du profil Google Business ?", "a": "Configuration/optimisation complète du profil, sélection de catégories, configuration du menu de services, téléchargement de photos/vidéos, stratégie de publication et gestion des questions-réponses." }
+        ]
+      },
+      {
+        "title": "Automatisation SMS",
+        "description": "Développez et personnalisez des campagnes marketing SMS qui engagent les clients et génèrent des conversions sur le canal avec 98% de taux d'ouverture.",
+        "benefits": [
+          "Stratégie de campagne SMS",
+          "Modèles SMS personnalisés",
+          "Séquences automatisées",
+          "Suivi de livraison et analytics"
+        ],
+        "cta": "Lancez Vos SMS",
+        "slug": "sms-automation",
+        "detailedDescription": "Le marketing SMS offre des taux d'ouverture inégalés (jusqu'à 98 %) et un engagement instantané. Nous développons des campagnes SMS personnalisées — des promotions et rappels de rendez-vous aux séquences automatisées — qui génèrent des conversions et renforcent les relations clients.",
+        "process": [
+          { "step": "Développement de la Stratégie", "description": "Définir les objectifs de la campagne, les segments cibles et le cadre de messagerie." },
+          { "step": "Conception de Modèles", "description": "Modèles SMS conformes et adaptés à la marque, optimisés pour l'engagement et les conversions." },
+          { "step": "Configuration de l'Automatisation", "description": "Construire des séquences automatisées déclenchées par des actions utilisateur, le temps ou des événements." },
+          { "step": "Configuration de la Conformité", "description": "Gestion des opt-in/opt-out, conformité avec les réglementations locales et suivi du consentement." },
+          { "step": "Analytique & Optimisation", "description": "Suivre les taux de livraison, les taux d'ouverture, les conversions et affiner les campagnes pour de meilleures performances." }
+        ],
+        "faq": [
+          { "q": "Le marketing SMS est-il légal ?", "a": "Oui, lorsqu'il est fait correctement. Nous veillons à ce que toutes les campagnes respectent les réglementations applicables, y compris le consentement opt-in, les options de désabonnement et les limites de fréquence des messages." },
+          { "q": "Quel est le taux d'ouverture typique des SMS ?", "a": "Les SMS ont un taux d'ouverture de 98 %, dont 90 % lus dans les 3 minutes. Cela en fait l'un des canaux marketing les plus efficaces disponibles." },
+          { "q": "Puis-je envoyer des SMS vers des numéros internationaux ?", "a": "Oui. Nous travaillons avec des fournisseurs qui prennent en charge la livraison mondiale de SMS, afin que vous puissiez atteindre vos clients où qu'ils soient." }
+        ]
+      },
+      {
+        "title": "Gestion des Réseaux Sociaux",
+        "description": "Construisez votre présence sur Instagram, Facebook, TikTok et LinkedIn avec du contenu qui génère de l'engagement.",
+        "benefits": [
+          "Planification de calendrier de contenu",
+          "Gestion de communauté",
+          "Analytique et reporting",
+          "Stratégie sociale payante"
+        ],
+        "cta": "Développez Social",
+        "slug": "social-media-management",
+        "detailedDescription": "Une présence cohérente et engageante sur les réseaux sociaux est essentielle pour le développement de la marque en 2026. Nous gérons l'ensemble de votre écosystème social — de la stratégie de contenu et la création à l'engagement communautaire et l'analytique — sur Instagram, Facebook, TikTok, LinkedIn et plus encore.",
+        "process": [
+          { "step": "Analyse de la Marque & de l'Audience", "description": "Comprendre la voix de votre marque, votre audience cible et le paysage concurrentiel sur chaque plateforme." },
+          { "step": "Stratégie de Contenu", "description": "Calendrier de contenu spécifique à chaque plateforme avec le bon équilibre entre contenu éducatif, promotionnel et engageant." },
+          { "step": "Création de Contenu", "description": "Design graphique professionnel, copywriting et production vidéo courte adaptés à chaque plateforme." },
+          { "step": "Gestion de Communauté", "description": "Engagement quotidien, réponses aux commentaires, gestion des messages privés et développement de la communauté." },
+          { "step": "Reporting & Optimisation", "description": "Rapports de performance mensuels avec métriques de croissance, analyse d'engagement et recommandations stratégiques." }
+        ],
+        "faq": [
+          { "q": "Sur quelles plateformes mon entreprise devrait-elle être ?", "a": "Cela dépend de votre audience. Nous analysons votre marché cible pour recommander les plateformes les plus efficaces — généralement une combinaison d'Instagram, Facebook, LinkedIn et TikTok." },
+          { "q": "À quelle fréquence allez-vous publier ?", "a": "Nous recommandons 4 à 7 publications par semaine sur vos plateformes actives, plus des stories quotidiennes et de l'engagement. La fréquence exacte est adaptée à vos ressources et objectifs." },
+          { "q": "Créez-vous aussi le contenu ?", "a": "Oui. Notre équipe s'occupe du design graphique, du copywriting et de la production vidéo. Vous approuvez simplement le calendrier de contenu et nous nous occupons du reste." }
+        ]
+      },
+      {
+        "title": "Google Ads & PPC",
+        "description": "Campagnes de recherche payante à fort ROI sur Google qui captent le trafic intentionnel et le convertissent en clients.",
+        "benefits": [
+          "Annonces Search & Display",
+          "Publicité YouTube",
+          "Campagnes Shopping",
+          "Suivi des conversions"
+        ],
+        "cta": "Lancez des Annonces",
+        "slug": "google-ads-ppc",
+        "detailedDescription": "Google Ads place votre entreprise devant les personnes qui recherchent activement ce que vous proposez. Nous concevons et gérons des campagnes à fort ROI sur Search, Display, YouTube et Shopping — avec un ciblage précis, des textes publicitaires convaincants et un suivi rigoureux des conversions pour garantir que chaque dollar travaille plus dur.",
+        "process": [
+          { "step": "Audit du Compte & Stratégie", "description": "Examiner les campagnes existantes (le cas échéant) et développer une stratégie PPC basée sur les données." },
+          { "step": "Recherche de Mots-Clés & d'Audience", "description": "Identifier les mots-clés à forte intention et constituer des segments d'audience ciblés." },
+          { "step": "Structure de Campagne & Création d'Annonces", "description": "Structure de campagne bien organisée avec des textes publicitaires convaincants et des extensions." },
+          { "step": "Configuration du Suivi des Conversions", "description": "Mise en œuvre d'un suivi approprié pour mesurer chaque conversion et calculer le vrai ROAS." },
+          { "step": "Optimisation & Reporting", "description": "Tests A/B continus, ajustements des enchères et rapports de performance hebdomadaires." }
+        ],
+        "faq": [
+          { "q": "Quel est le budget minimum pour Google Ads ?", "a": "Nous recommandons un budget minimum de 500 $/mois pour les campagnes Search afin de générer des données et des résultats significatifs. Les campagnes Display et YouTube peuvent démarrer avec moins." },
+          { "q": "Quand verrai-je les résultats ?", "a": "Les campagnes peuvent commencer à générer du trafic en quelques heures après le lancement. Nous avons généralement besoin de 2 à 4 semaines pour recueillir suffisamment de données pour une optimisation significative." },
+          { "q": "Gérez-vous les dépenses publicitaires ou est-ce moi ?", "a": "Nous gérons tout — allocation budgétaire, stratégies d'enchères, rotation des annonces et ciblage d'audience. Vous approuvez la stratégie et nous gérons le quotidien." }
+        ]
+      },
+      {
+        "title": "Publicité sur Réseaux Sociaux",
+        "description": "Campagnes publicitaires ciblées sur Facebook, Instagram et TikTok optimisées pour la génération de leads et les ventes.",
+        "benefits": [
+          "Ciblage d'audience",
+          "Créatifs et copy ads",
+          "Tests A/B",
+          "Entonnoirs de reciblage"
+        ],
+        "cta": "Publicitez Maintenant",
+        "slug": "social-media-ads",
+        "detailedDescription": "La publicité sur les réseaux sociaux offre une précision de ciblage inégalée. Nous créons et gérons des campagnes publicitaires performantes sur Facebook, Instagram, TikTok et LinkedIn — avec des créatifs convaincants, un ciblage d'audience précis et des tests A/B systématiques pour maximiser votre retour sur investissement publicitaire.",
+        "process": [
+          { "step": "Recherche d'Audience", "description": "Construire des profils d'audience détaillés basés sur les données démographiques, les centres d'intérêt, les comportements et les audiences similaires." },
+          { "step": "Développement Créatif", "description": "Créatifs publicitaires professionnels — images, vidéos et copy — adaptés à chaque plateforme et audience." },
+          { "step": "Configuration de la Campagne", "description": "Campagnes structurées avec un suivi, des budgets et des stratégies d'enchères appropriés." },
+          { "step": "Tests A/B", "description": "Tests systématiques des créatifs, des audiences et des emplacements pour trouver les combinaisons gagnantes." },
+          { "step": "Optimisation & Passage à l'Échelle", "description": "Optimisation basée sur les données et augmentation progressive des campagnes rentables." }
+        ],
+        "faq": [
+          { "q": "Quelle plateforme sociale est la meilleure pour les publicités ?", "a": "Cela dépend de votre audience. Facebook/Instagram excellent pour le B2C et les produits visuels, LinkedIn pour le B2B, TikTok pour les jeunes démographies, et toutes peuvent fonctionner avec la bonne stratégie." },
+          { "q": "Comment ciblez-vous la bonne audience ?", "a": "Nous utilisons une combinaison de ciblage par centres d'intérêt, d'audiences similaires basées sur vos données clients, de reciblage et d'audiences personnalisées pour atteindre les prospects les plus pertinents." },
+          { "q": "Quelles métriques suivez-vous ?", "a": "Nous suivons le CTR, le CPC, le CPM, le taux de conversion, le ROAS, le coût par lead et le coût par acquisition — et optimisons les campagnes en fonction de ce qui compte le plus pour votre entreprise." }
+        ]
+      },
+      {
+        "title": "Création de Contenu",
+        "description": "Copywriting professionnel, vidéo courte et design graphique qui raconte l'histoire de votre marque et génère de l'action.",
+        "benefits": [
+          "Copywriting & blogging",
+          "Vidéo courte",
+          "Design graphique",
+          "Stratégie de voix de marque"
+        ],
+        "cta": "Créez du Contenu",
+        "slug": "content-creation",
+        "detailedDescription": "Un bon contenu renforce la confiance, génère du trafic et convertit les prospects en clients. Nos services de création de contenu couvrent le copywriting, le blogging, la production vidéo courte et le design graphique — le tout aligné sur la voix de votre marque et optimisé pour les moteurs de recherche et les plateformes sociales.",
+        "process": [
+          { "step": "Définition de la Voix de la Marque", "description": "Établir le ton, le style et les directives de messagerie de votre marque pour un contenu cohérent." },
+          { "step": "Stratégie de Contenu", "description": "Calendrier éditorial couvrant les articles de blog, le contenu social, les vidéos et les supports marketing." },
+          { "step": "Copywriting & Blogging", "description": "Articles optimisés SEO, copy de site web, séquences d'emails et textes publicitaires." },
+          { "step": "Production Visuelle & Vidéo", "description": "Design graphique professionnel et création de vidéos courtes pour les réseaux sociaux et les publicités." },
+          { "step": "Revue de Performance", "description": "Suivre les métriques d'engagement, de trafic et de conversion pour affiner la stratégie de contenu." }
+        ],
+        "faq": [
+          { "q": "Quelle quantité de contenu produisez-vous ?", "a": "Nous produisons généralement 4 à 8 articles de blog par mois, 15 à 20 graphiques pour les réseaux sociaux et 4 à 8 vidéos courtes — le tout adapté à vos besoins et budget spécifiques." },
+          { "q": "Optimisez-vous le contenu pour le SEO ?", "a": "Oui. Chaque contenu écrit est optimisé avec une recherche de mots-clés, des titres appropriés, des descriptions meta et une structure de maillage interne." },
+          { "q": "Pouvez-vous correspondre à la voix de notre marque ?", "a": "Absolument. Nous commençons par une analyse approfondie de la voix de votre marque et créons un guide de style avant de produire tout contenu. La voix unique de votre marque est notre priorité absolue." }
+        ]
+      },
+      {
+        "title": "Solutions E-commerce",
+        "description": "Lancez et optimisez votre boutique en ligne avec Shopify, WooCommerce ou des constructions sur mesure qui maximisent les conversions.",
+        "benefits": [
+          "Configuration & design de boutique",
+          "Optimisation produit",
+          "Intégration de paiement",
+          "Optimisation des conversions"
+        ],
+        "cta": "Lancez la Boutique",
+        "slug": "ecommerce-solutions",
+        "detailedDescription": "Prêt à vendre en ligne ? Nous construisons et optimisons des boutiques e-commerce rapides, sécurisées et conçues pour convertir. Que vous ayez besoin d'une boutique Shopify, d'une intégration WooCommerce ou d'une solution entièrement personnalisée, nous gérons tout, de l'optimisation des pages produits à l'intégration des passerelles de paiement.",
+        "process": [
+          { "step": "Sélection de la Plateforme", "description": "Recommander la meilleure plateforme e-commerce en fonction de vos produits, de votre volume et de votre budget." },
+          { "step": "Design & Configuration de la Boutique", "description": "Design de boutique personnalisé avec navigation intuitive, optimisation mobile et image de marque." },
+          { "step": "Optimisation des Produits", "description": "Descriptions de produits convaincantes, images de haute qualité et fiches optimisées SEO." },
+          { "step": "Configuration du Paiement & de la Livraison", "description": "Intégration avec les passerelles de paiement locales et internationales et les transporteurs." },
+          { "step": "Lancement & Optimisation", "description": "Tests avant lancement, support de mise en service et optimisation continue du taux de conversion." }
+        ],
+        "faq": [
+          { "q": "Quelle plateforme est la meilleure pour mon entreprise ?", "a": "Shopify est idéal pour la plupart des entreprises en raison de sa facilité d'utilisation et de son écosystème. WooCommerce offre plus de flexibilité. Nous recommandons en fonction de vos besoins spécifiques." },
+          { "q": "Intégrez-vous les méthodes de paiement africaines ?", "a": "Oui. Nous nous intégrons avec Orange Money, MTN MoMo, Wave, Flutterwave et d'autres passerelles de paiement populaires à travers l'Afrique." },
+          { "q": "Pouvez-vous migrer ma boutique existante ?", "a": "Oui. Nous gérons la migration des données depuis des plateformes comme WooCommerce, Magento ou des solutions personnalisées vers votre nouvelle plateforme avec un temps d'arrêt minimal." }
+        ]
+      },
+      {
+        "title": "Configuration & Automatisation CRM",
+        "description": "Implémentez et automatisez des systèmes CRM qui suivent les leads, nourrissent les relations et concluent plus d'affaires.",
+        "benefits": [
+          "Sélection & configuration CRM",
+          "Automatisation du pipeline",
+          "Score de leads",
+          "Intégration avec les outils"
+        ],
+        "cta": "Configurez le CRM",
+        "slug": "crm-setup-automation",
+        "detailedDescription": "Un CRM bien mis en œuvre est l'épine dorsale de votre processus de vente. Nous vous aidons à choisir, configurer et automatiser le bon système CRM — avec des pipelines personnalisés, un scoring automatisé des leads, une intégration email et des tableaux de bord en temps réel qui vous donnent une visibilité complète sur votre entonnoir de vente.",
+        "process": [
+          { "step": "Évaluation des Besoins", "description": "Évaluer votre processus de vente, la structure de votre équipe et vos exigences pour recommander le meilleur CRM." },
+          { "step": "Configuration & Paramétrage du CRM", "description": "Configuration de la plateforme, champs personnalisés, création de pipelines et configuration des autorisations utilisateur." },
+          { "step": "Développement de l'Automatisation", "description": "Attribution automatisée des leads, séquences de suivi, création de tâches et intégration email." },
+          { "step": "Migration des Données", "description": "Nettoyer et importer les données de contacts existantes, l'historique des affaires et les objets personnalisés." },
+          { "step": "Formation & Mise en Service", "description": "Formation de l'équipe, documentation et support continu pour une adoption fluide." }
+        ],
+        "faq": [
+          { "q": "Quel CRM recommandez-vous ?", "a": "Nous travaillons avec HubSpot, Salesforce, Pipedrive, Zoho et des solutions personnalisées. Notre recommandation dépend de la taille de votre équipe, de votre budget et de la complexité de vos besoins." },
+          { "q": "Pouvez-vous intégrer mon CRM avec d'autres outils ?", "a": "Oui. Nous intégrons les CRM avec les plateformes email (Gmail, Outlook), les outils marketing, WhatsApp, les systèmes SMS et les logiciels comptables." },
+          { "q": "Combien de temps prend la configuration d'un CRM ?", "a": "Une configuration de base peut être effectuée en 1 à 2 semaines. Les implémentations complexes avec des automatisations et intégrations personnalisées prennent généralement 3 à 6 semaines." }
+        ]
+      },
+      {
+        "title": "Gestion de Réputation",
+        "description": "Surveillez, gérez et améliorez votre réputation en ligne sur les plateformes d'avis et les réseaux sociaux.",
+        "benefits": [
+          "Surveillance des avis",
+          "Gestion des réponses",
+          "Stratégie de réputation",
+          "Analyse comparative des concurrents"
+        ],
+        "cta": "Protégez la Réputation",
+        "slug": "reputation-management",
+        "detailedDescription": "Votre réputation en ligne est l'un de vos actifs commerciaux les plus précieux. Nous surveillons les plateformes d'avis, les mentions sur les réseaux sociaux et les résultats de recherche — puis prenons des mesures stratégiques pour construire, protéger et améliorer la réputation de votre marque. De la génération d'avis à la gestion de crise, nous faisons briller votre marque.",
+        "process": [
+          { "step": "Audit de Réputation", "description": "Évaluation complète de votre réputation en ligne actuelle sur toutes les plateformes." },
+          { "step": "Configuration de la Surveillance", "description": "Mettre en œuvre des outils et processus pour suivre les avis, les mentions et le sentiment en temps réel." },
+          { "step": "Gestion des Avis", "description": "Approche systématique pour générer des avis positifs et répondre professionnellement aux avis négatifs." },
+          { "step": "Stratégie de Contenu & SEO", "description": "Création de contenu positif et SEO pour repousser les résultats négatifs et contrôler votre narrative." },
+          { "step": "Reporting Continu", "description": "Rapports de réputation mensuels avec tendances des avis, analyse de sentiment et recommandations." }
+        ],
+        "faq": [
+          { "q": "Pouvez-vous supprimer les avis négatifs ?", "a": "Nous ne pouvons pas supprimer directement les avis légitimes, mais nous pouvons aider à répondre professionnellement, résoudre les problèmes et générer suffisamment d'avis positifs pour minimiser leur impact." },
+          { "q": "Quelles plateformes surveillez-vous ?", "a": "Google, Facebook, Yelp, Trustpilot, TripAdvisor et les plateformes spécifiques à chaque secteur. Nous surveillons également les mentions sur les réseaux sociaux et les articles de presse." },
+          { "q": "À quelle vitesse répondez-vous aux avis ?", "a": "Notre équipe surveille les avis en temps réel et répond aux avis négatifs sous 24 heures, souvent en quelques heures pendant les jours ouvrables." }
+        ]
+      },
+      {
+        "title": "Maintenance & Support",
+        "description": "Entretien continu du site web, surveillance de la sécurité, mises à jour et support technique pour garder votre site opérationnel.",
+        "benefits": [
+          "Mises à jour régulières",
+          "Surveillance de sécurité",
+          "Gestion des sauvegardes",
+          "Support prioritaire"
+        ],
+        "cta": "Obtenez du Support",
+        "slug": "maintenance-support",
+        "detailedDescription": "Votre site web a besoin de soins continus pour rester sécurisé, rapide et fiable. Nos forfaits de maintenance et de support couvrent tout, des mises à jour régulières et correctifs de sécurité à la surveillance des performances et au support technique prioritaire. Nous maintenons vos actifs numériques en bonne santé pour que vous puissiez vous concentrer sur la croissance de votre entreprise.",
+        "process": [
+          { "step": "Bilan de Santé Initial", "description": "Audit complet de l'état actuel de votre site web — sécurité, performance et qualité du code." },
+          { "step": "Sélection du Forfait", "description": "Choisir un forfait de maintenance adapté à vos besoins, du basique au premium." },
+          { "step": "Maintenance Continue", "description": "Mises à jour régulières, correctifs de sécurité, sauvegardes et surveillance des performances." },
+          { "step": "Support Prioritaire", "description": "Accès direct à notre équipe pour les problèmes urgents, avec des temps de réponse garantis." },
+          { "step": "Reporting Mensuel", "description": "Rapports détaillés sur la disponibilité, les performances, l'état de sécurité et les recommandations." }
+        ],
+        "faq": [
+          { "q": "Qu'est-ce qui est inclus dans un forfait de maintenance ?", "a": "Mises à jour CMS/plugins, surveillance de sécurité, sauvegardes quotidiennes, optimisation des performances et support email prioritaire. Les forfaits premium incluent le support téléphonique 24/7 et des mises à jour de contenu mensuelles." },
+          { "q": "Proposez-vous un support d'urgence ?", "a": "Oui. Tous les forfaits incluent un support prioritaire avec des temps de réponse garantis. Les forfaits premium incluent un support téléphonique 24/7 pour les problèmes critiques." },
+          { "q": "Puis-je annuler à tout moment ?", "a": "Oui. Nos forfaits de maintenance sont mensuels, sans engagement à long terme. Vous pouvez annuler à tout moment avec un préavis de 30 jours." }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "badge": "Nos Résultats",
+    "title": "Des Résultats",
+    "highlight": "Basés sur les Données",
+    "subtitle": "Qui Parlent d'Eux-Mêmes",
+    "description": "Nous ne promettons pas seulement la croissance. Nous livrons des résultats mesurables qui impactent vos résultats financiers.",
+    "stats": [
+      {
+        "value": 350,
+        "suffix": "%",
+        "label": "Augmentation moyenne du trafic"
+      },
+      {
+        "value": 85,
+        "suffix": "%",
+        "label": "Meilleurs classements"
+      },
+      {
+        "value": 200,
+        "suffix": "%",
+        "label": "Plus de leads générés"
+      },
+      {
+        "value": 45,
+        "suffix": "%",
+        "label": "Conversions plus élevées"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "badge": "Pourquoi Nous Choisir",
+    "title": "Nous Construisons des",
+    "highlight": "Moteurs de Croissance",
+    "subtitle": "Pas Seulement des Sites Web",
+    "description": "Nous combinons l'expertise technique avec des stratégies basées sur l'IA pour livrer des résultats réels et mesurables pour votre entreprise. Voici pourquoi les clients nous font confiance.",
+    "tags": [
+      "500+ Projets Réalisés",
+      "Note Client 4.9/5",
+      "Partenariat Moyen de 3 Ans"
+    ],
+    "items": [
+      {
+        "title": "Stratégies Éprouvées",
+        "description": "Chaque tactique est soutenue par des données, testée pour les résultats et affinée pour un ROI maximal."
+      },
+      {
+        "title": "Exécution Rapide",
+        "description": "Nous avançons à la vitesse d'une startup. Les campagnes sont lancées en jours, pas en semaines ou mois."
+      },
+      {
+        "title": "Systèmes Alimentés par l'IA",
+        "description": "Exploitation de l'intelligence artificielle pour optimiser les campagnes, le contenu et les conversions."
+      },
+      {
+        "title": "Solutions Abordables",
+        "description": "Marketing numérique de qualité entreprise à des prix adaptés aux entreprises en croissance."
+      },
+      {
+        "title": "Support Continu",
+        "description": "Nous sommes votre partenaire à long terme. Optimisation continue, rapports et support inclus."
+      }
+    ]
+  },
+  "industries": {
+    "badge": "Secteurs",
+    "title": "Nous Servons",
+    "highlight": "Divers Secteurs d'Activité",
+    "description": "Des stratégies spécifiques à chaque secteur adaptées à votre marché et à votre audience uniques.",
+    "list": [
+      {
+        "name": "Cabinet d'Avocats",
+        "description": "Dominez la recherche locale et attirez des clients juridiques de grande valeur recherchant votre expertise."
+      },
+      {
+        "name": "Courtiers en Assurance",
+        "description": "Générez des leads d'assurance qualifiés grâce au SEO ciblé et aux suivis automatisés."
+      },
+      {
+        "name": "ONG",
+        "description": "Amplifiez votre mission avec une présence numérique convaincante et des stratégies d'acquisition de donateurs."
+      },
+      {
+        "name": "Hôtels",
+        "description": "Stimulez les réservations directes avec le SEO local, un design web époustouflant et une sensibilisation automatisée des clients."
+      },
+      {
+        "name": "Écoles",
+        "description": "Attirez les inscriptions avec des entonnoirs d'admission optimisés et un engagement communautaire."
+      },
+      {
+        "name": "Immobilier",
+        "description": "Convertissez les chercheurs de propriétés en acheteurs avec des visites virtuelles immersives et des systèmes de leads."
+      }
+    ]
+  },
+  "caseStudies": {
+    "metaTitle": "Études de Cas",
+    "metaDescription": "Découvrez comment GrowthPilot Agency a transformé des entreprises grâce au SEO, à l'automatisation IA et au design web. Des résultats réels pour des entreprises réelles.",
+    "badge": "Études de Cas",
+    "title": "Des Résultats Réels pour",
+    "highlight": "des Entreprises Réelles",
+    "description": "Découvrez comment nous avons transformé des entreprises dans différents secteurs.",
+    "before": "Avant",
+    "after": "Après",
+    "keyMetrics": "Métriques Clés",
+    "viewCaseStudy": "Voir l'Étude de Cas",
+    "allCaseStudies": "Toutes les Études de Cas",
+    "backToCaseStudies": "Retour aux Études de Cas",
+    "metricLabels": {
+      "Traffic Increase": "Augmentation du Trafic",
+      "Rankings Improved": "Classements Améliorés",
+      "Lead Conversion": "Conversion de Leads",
+      "Response Time": "Temps de Réponse",
+      "Leads Generated": "Leads Générés",
+      "Close Rate": "Taux de Clôture",
+      "Website Traffic": "Trafic du Site Web",
+      "Google Maps Rank": "Classement Google Maps",
+      "Booking Rate": "Taux de Réservation"
+    },
+    "list": [
+      {
+        "title": "Transformation de la Génération de Leads pour Cabinet d'Avocats",
+        "slug": "law-firm-lead-generation",
+        "metaDescription": "Comment nous avons transformé un cabinet d'avocats de 5 à 200+ leads organiques par mois grâce au SEO, à la stratégie de contenu et à l'optimisation technique.",
+        "industry": "Services Juridiques",
+        "before": "Dépendait uniquement des recommandations, présence en ligne minimale, 5 leads organiques/mois.",
+        "after": "Présence de recherche dominante, 200+ leads organiques/mois, 40% provenant du SEO.",
+        "metrics": {
+          "Traffic Increase": "380%",
+          "Rankings Improved": "45 mots-clés dans le top 3",
+          "Lead Conversion": "12.5%"
+        }
+      },
+      {
+        "title": "Automatisation WhatsApp pour Courtier en Assurance",
+        "slug": "insurance-whatsapp-automation",
+        "metaDescription": "Comment un courtier en assurance a automatisé ses réponses WhatsApp, réduisant le temps de réponse de 4 heures à 30 secondes et augmentant les leads de 433%.",
+        "industry": "Assurance",
+        "before": "Réponses manuelles, suivis lents, 15 leads qualifiés/mois.",
+        "after": "Réponses automatisées 24/7, suivis instantanés, 80+ leads qualifiés/mois.",
+        "metrics": {
+          "Response Time": "De 4h à 30s",
+          "Leads Generated": "+433%",
+          "Close Rate": "28%"
+        }
+      },
+      {
+        "title": "Refonte de Site Web & SEO pour Clinique",
+        "slug": "clinic-website-seo",
+        "metaDescription": "Comment une clinique est passée d'un site obsolète sans SEO local à la première place sur Google Maps avec 200+ rendez-vous par mois.",
+        "industry": "Santé",
+        "before": "Site web obsolète, pas de SEO local, 10 rendez-vous/mois.",
+        "after": "Site moderne à fort taux de conversion, #1 sur Google Maps, 200+ rendez-vous/mois.",
+        "metrics": {
+          "Website Traffic": "+520%",
+          "Google Maps Rank": "#1 pour 12 mots-clés",
+          "Booking Rate": "22%"
+        }
+      }
+    ]
+  },
+  "seoAudit": {
+    "badge": "Audit SEO Gratuit",
+    "title": "Obtenez Votre",
+    "highlight": "Rapport d'Audit SEO Gratuit",
+    "description": "Découvrez exactement ce qui empêche votre site web de bien se classer sur Google. Nous analyserons votre site et vous enverrons un rapport détaillé avec des recommandations actionnables.",
+    "benefits": [
+      "Analyse technique complète du site web",
+      "Analyse comparative des concurrents",
+      "Évaluation des opportunités de mots-clés",
+      "Feuille de route de croissance personnalisée",
+      "Sans engagement, livraison sous 24h"
+    ],
+    "form": {
+      "fullName": "Nom Complet",
+      "fullNamePlaceholder": "Jean Dupont",
+      "email": "Adresse Email",
+      "emailPlaceholder": "jean@exemple.com",
+      "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "+225 01 234 5678",
+      "company": "Nom de l'Entreprise",
+      "companyPlaceholder": "Votre Entreprise SARL",
+      "website": "URL du Site Web",
+      "websitePlaceholder": "https://votresite.com",
+      "submit": "Obtenir Mon Audit SEO Gratuit",
+      "processing": "Traitement en cours...",
+      "privacy": "Pas de spam. Désabonnez-vous à tout moment. Vos données sont en sécurité avec nous."
+    },
+    "successTitle": "Vous Êtes Prêt !",
+    "successMessage": "Merci ! Consultez votre email pour votre audit SEO gratuit."
+  },
+  "testimonials": {
+    "badge": "Témoignages",
+    "title": "Ce Que Disent",
+    "highlight": "Nos Clients",
+    "description": "Ne nous croyez pas sur parole. Voici ce que nos clients disent de nous.",
+    "list": [
+      {
+        "name": "Sarah Mensah",
+        "role": "Associée Gérante",
+        "company": "Cabinet Mensah & Associés",
+        "content": "GrowthPilot Agency a transformé notre présence en ligne. Nos leads organiques ont augmenté de 400% en seulement 3 mois. Le ROI a été extraordinaire."
+      },
+      {
+        "name": "James Osei",
+        "role": "PDG",
+        "company": "Osei Courtiers en Assurance",
+        "content": "Le système d'automatisation WhatsApp qu'ils ont construit pour nous a révolutionné notre façon de gérer les demandes des clients. Nous répondons maintenant instantanément et concluons 3 fois plus d'affaires."
+      },
+      {
+        "name": "Dr. Amma Boateng",
+        "role": "Directrice",
+        "company": "Cliniques WellCare",
+        "content": "Nos réservations de patients ont doublé après la refonte SEO et le nouveau site web. L'équipe comprend le marketing de la santé à un niveau profond."
+      },
+      {
+        "name": "Kwame Asare",
+        "role": "Fondateur",
+        "company": "Propriétés Asare",
+        "content": "De zéro à la page 1 sur Google pour des mots-clés immobiliers compétitifs en 60 jours. Un travail absolument phénoménal."
+      }
+    ]
+  },
+  "about": {
+    "badge": "À Propos",
+    "name": "Agyiri Sakyi",
+    "title": "Développeur Web, Spécialiste SEO & Consultant en Automatisation IA",
+    "description": "Avec plus de 7 ans d'expérience, j'ai aidé 50+ entreprises dans plusieurs secteurs à transformer leur présence numérique et à réaliser une croissance mesurable. Mon approche combine expertise technique et stratégies basées sur l'IA pour fournir des résultats qui comptent.",
+    "years": "7+ ans",
+    "skills": [
+      "SEO",
+      "Next.js",
+      "React",
+      "WordPress",
+      "Cloud Tech",
+      "Automatisation IA",
+      "Génération de Leads"
+    ]
+  },
+  "team": {
+    "metaTitle": "Notre Équipe | GrowthPilot Agency",
+    "metaDescription": "Rencontrez les experts derrière GrowthPilot Agency — une équipe de stratèges, développeurs et esprits créatifs dédiés à votre croissance.",
+    "pageTitle": "Notre Équipe",
+    "pageDescription": "Rencontrez les experts derrière GrowthPilot Agency — une équipe de stratèges, développeurs et esprits créatifs dédiés à votre croissance.",
+    "badge": "Notre Équipe",
+    "title": "Rencontrez les",
+    "highlight": "Experts",
+    "description": "Une équipe diversifiée de stratèges, designers, développeurs et growth hackers travaillant ensemble pour produire des résultats.",
+    "members": [
+      {
+        "name": "Agyiri Sakyi",
+        "role": "Fondateur & PDG",
+        "bio": "Leader visionnaire avec plus de 7 ans d'expérience en marketing numérique, SEO et automatisation IA. Agyiri a fondé GrowthPilot Agency pour aider les entreprises à tirer parti de la technologie pour une croissance mesurable.",
+        "skills": [
+          "Stratégie",
+          "SEO",
+          "Automatisation IA",
+          "Leadership"
+        ]
+      },
+      {
+        "name": "Vannil",
+        "role": "Traducteur",
+        "bio": "Traducteur compétent garantissant que tout le contenu est précisément adapté aux publics francophones. Vannil comble le fossé linguistique pour que votre message résonne à travers l'Afrique de l'Ouest.",
+        "skills": [
+          "Traduction EN/FR",
+          "Localisation",
+          "Rédaction",
+          "Communication Interculturelle"
+        ]
+      },
+      {
+        "name": "Fry Kobena Vincent",
+        "role": "Chef de Projet",
+        "bio": "Chef de projet expérimenté garantissant que chaque campagne et projet de développement est livré à temps, dans les limites du périmètre et au-delà des attentes. Fry maintient l'équipe alignée et les clients informés.",
+        "skills": [
+          "Gestion de Projet",
+          "Agile/Scrum",
+          "Communication Client",
+          "Planification des Ressources"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "description": "Nous aidons les entreprises à croître plus rapidement grâce au SEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp.",
+    "services": "Services",
+    "company": "Entreprise",
+    "industries": "Secteurs",
+    "about": "À Propos",
+    "contact": "Contact",
+    "allRightsReserved": "Tous droits réservés.",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "serviceLinks": {
+      "seo": "Services SEO",
+      "website": "Conception de Sites Web",
+      "ai": "Automatisation IA",
+      "whatsapp": "Automatisation WhatsApp",
+      "leads": "Génération de Leads",
+      "localSeo": "SEO Local",
+      "sms": "Automatisation SMS",
+      "social": "Gestion des Réseaux Sociaux",
+      "ads": "Google Ads & PPC",
+      "socialAds": "Publicité sur Réseaux Sociaux",
+      "content": "Création de Contenu",
+      "ecommerce": "Solutions E-commerce",
+      "crm": "Configuration & Automatisation CRM",
+      "reputation": "Gestion de Réputation",
+      "maintenance": "Maintenance & Support"
+    },
+    "companyLinks": {
+      "about": "À Propos",
+      "team": "Équipe",
+      "caseStudies": "Études de Cas",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "industryLinks": {
+      "law": "Cabinet d'Avocats",
+      "insurance": "Courtiers en Assurance",
+      "ngos": "ONG",
+      "realEstate": "Immobilier",
+      "healthcare": "Santé",
+      "hotels": "Hôtels"
+    }
+  },
+  "contact": {
+    "badge": "Contactez-Nous",
+    "title": "Construisons Votre",
+    "highlight": "Moteur de Croissance",
+    "description": "Prêt à passer votre entreprise au niveau supérieur ? Contactez-nous et faisons en sorte que cela se réalise.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Adresse",
+    "responseTime": "Délai de Réponse",
+    "responseTimeValue": "Sous 24 heures",
+    "successTitle": "Message Envoyé !",
+    "successMessage": "Message envoyé avec succès !",
+    "sendAnother": "Envoyer un Autre Message",
+    "form": {
+      "fullName": "Nom Complet *",
+      "fullNamePlaceholder": "Votre nom",
+      "email": "Email *",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+225 01 234 5678",
+      "subject": "Sujet *",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
+      "message": "Message *",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours..."
+    }
+  },
+  "privacy": {
+    "metaTitle": "Politique de Confidentialité",
+    "metaDescription": "Découvrez comment GrowthPilot Agency collecte, utilise et protège vos données personnelles. Notre politique de confidentialité explique vos droits et nos pratiques en matière de données.",
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : 24 juin 2026",
+    "sections": [
+      {
+        "heading": "1. Introduction",
+        "content": "GrowthPilot Agency (\"nous,\" \"notre,\" ou \"nos\") s'engage à protéger votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site web ou utilisez nos services."
+      },
+      {
+        "heading": "2. Informations que Nous Collectons",
+        "content": "Nous pouvons collecter les types d'informations suivants :",
+        "items": [
+          "Données Personnelles : nom, adresse email, numéro de téléphone, nom de l'entreprise et URL du site web lorsque vous soumettez nos formulaires de contact ou d'audit SEO.",
+          "Données d'Utilisation : pages visitées, temps passé, type de navigateur et informations sur l'appareil collectées via des cookies et des outils d'analyse.",
+          "Données de Communication : toute information que vous fournissez lorsque vous nous contactez par email, WhatsApp ou d'autres canaux."
+        ]
+      },
+      {
+        "heading": "3. Comment Nous Utilisons Vos Informations",
+        "content": "Nous utilisons les informations collectées aux fins suivantes :",
+        "items": [
+          "Fournir, exploiter et maintenir nos services",
+          "Répondre à vos demandes, requêtes et besoins de support",
+          "Vous envoyer des communications marketing et promotionnelles (avec votre consentement)",
+          "Améliorer notre site web et nos services en fonction des modèles d'utilisation",
+          "Se conformer aux obligations légales et protéger nos droits"
+        ]
+      },
+      {
+        "heading": "4. Protection des Données",
+        "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, modification, divulgation ou destruction. Cependant, aucune méthode de transmission sur Internet n'est 100% sécurisée."
+      },
+      {
+        "heading": "5. Services Tiers",
+        "content": "Nous pouvons employer des entreprises et des individus tiers pour faciliter nos services, fournir des analyses ou aider au support client. Ces tiers n'ont accès à vos données personnelles que pour effectuer ces tâches pour notre compte et sont tenus de ne pas les divulguer ou les utiliser à d'autres fins."
+      },
+      {
+        "heading": "6. Cookies",
+        "content": "Notre site web peut utiliser des cookies et des technologies de suivi similaires pour améliorer votre expérience de navigation. Vous pouvez demander à votre navigateur de refuser tous les cookies ou d'indiquer quand un cookie est envoyé."
+      },
+      {
+        "heading": "7. Vos Droits",
+        "content": "Selon votre emplacement, vous pouvez avoir les droits suivants concernant vos données personnelles :",
+        "items": [
+          "Le droit d'accéder, mettre à jour ou supprimer vos informations",
+          "Le droit de retirer votre consentement à tout moment",
+          "Le droit de vous opposer au traitement de vos données personnelles",
+          "Le droit à la portabilité des données"
+        ]
+      },
+      {
+        "heading": "8. Nous Contacter",
+        "content": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à agyirisakyi3@gmail.com."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Conditions d'Utilisation",
+    "metaDescription": "Lisez les Conditions d'Utilisation de GrowthPilot Agency. Comprenez les conditions régissant votre utilisation de nos services de marketing numérique et de notre site web.",
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière mise à jour : 24 juin 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptation des Conditions",
+        "content": "En accédant ou en utilisant le site web et les services de GrowthPilot Agency, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas une partie de ces conditions, vous ne pouvez pas accéder à nos services."
+      },
+      {
+        "heading": "2. Description des Services",
+        "content": "GrowthPilot Agency fournit des services de marketing numérique incluant mais sans s'y limiter le SEO, la conception de sites web, l'automatisation IA, l'automatisation WhatsApp et la génération de leads. La portée, les livrables et le calendrier de chaque projet seront définis dans une convention de service distincte."
+      },
+      {
+        "heading": "3. Responsabilités de l'Utilisateur",
+        "content": "En tant qu'utilisateur de nos services, vous acceptez de :",
+        "items": [
+          "Fournir des informations exactes et complètes lors de l'utilisation de nos formulaires ou services",
+          "Utiliser nos services uniquement à des fins licites et conformément aux lois applicables",
+          "Ne pas vous engager dans une activité qui pourrait nuire, perturber ou compromettre notre site web ou nos services",
+          "Ne pas tenter d'obtenir un accès non autorisé à toute partie de nos systèmes"
+        ]
+      },
+      {
+        "heading": "4. Propriété Intellectuelle",
+        "content": "Tout le contenu, les matériaux, les designs et le code fournis par GrowthPilot Agency sont la propriété intellectuelle de GrowthPilot Agency sauf indication contraire. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans notre consentement écrit préalable."
+      },
+      {
+        "heading": "5. Conditions de Paiement",
+        "content": "Les conditions de paiement pour les services seront spécifiées dans les conventions de service individuelles. Le non-paiement dans les délais peut entraîner la suspension ou la résiliation des services. Tous les frais sont non remboursables sauf indication contraire écrite."
+      },
+      {
+        "heading": "6. Limitation de Responsabilité",
+        "content": "GrowthPilot Agency ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation ou de votre incapacité à utiliser nos services. Notre responsabilité totale ne dépassera pas le montant payé par vous pour le service spécifique à l'origine de la réclamation."
+      },
+      {
+        "heading": "7. Résiliation",
+        "content": "Nous nous réservons le droit de résilier ou de suspendre l'accès à nos services immédiatement, sans préavis, pour toute violation de ces Conditions d'Utilisation ou pour toute autre raison jugée nécessaire."
+      },
+      {
+        "heading": "8. Modifications des Conditions",
+        "content": "Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications prendront effet immédiatement après leur publication sur cette page. Votre utilisation continue de nos services après toute modification constitue une acceptation des conditions mises à jour."
+      },
+      {
+        "heading": "9. Droit Applicable",
+        "content": "Les présentes Conditions d'Utilisation sont régies et interprétées conformément aux lois de la République de Côte d'Ivoire. Tout litige découlant de ces conditions sera soumis à la juridiction exclusive des tribunaux d'Abidjan, Côte d'Ivoire."
+      },
+      {
+        "heading": "10. Coordonnées",
+        "content": "Pour toute question concernant ces Conditions d'Utilisation, veuillez nous contacter à agyirisakyi3@gmail.com ou visiter notre page de Contact."
+      }
+    ]
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Conseils, astuces et stratégies sur le SEO, l'automatisation IA, le design web et le marketing numérique de la part de l'équipe GrowthPilot Agency.",
+    "badge": "Notre Blog",
+    "title": "Dernières",
+    "highlight": "Actualités",
+    "description": "Conseils, stratégies et insights sectoriels pour aider votre entreprise à croître en ligne.",
+    "readMore": "Lire la Suite",
+    "backToBlog": "Retour au Blog",
+    "by": "Par",
+    "publishedOn": "Publié le",
+    "categories": "Catégories",
+    "noPosts": "Aucun article pour le moment. Revenez bientôt !"
+  },
+  "cookie": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser notre trafic. En cliquant sur \"Accepter\", vous consentez à notre utilisation des cookies.",
+    "learnMore": "En savoir plus",
+    "decline": "Refuser",
+    "accept": "Accepter"
+  },
+  "exitIntent": {
+    "badge": "Téléchargement Gratuit",
+    "title": "Obtenez Votre Liste de Contrôle SEO Gratuite",
+    "description": "Liste de contrôle en 27 points utilisée par notre équipe pour classer 50+ entreprises en page 1 de Google. Entrez votre email et nous vous l'enverrons instantanément.",
+    "benefits": [
+      "Analyse technique complète du site web",
+      "Analyse comparative des concurrents",
+      "Évaluation des opportunités de mots-clés",
+      "Feuille de route de croissance personnalisée",
+      "Sans engagement, livraison sous 24h"
+    ],
+    "placeholder": "votre@email.com",
+    "cta": "Envoyez-Moi Ma Liste Gratuite",
+    "sending": "Envoi en cours...",
+    "noSpam": "Pas de spam. Désabonnez-vous à tout moment.",
+    "thankYou": "Vérifiez Votre Boîte de Réception !",
+    "checkInbox": "Votre liste de contrôle SEO gratuite est en route. Préparez-vous à booster vos classements.",
+    "close": "Fermer"
+  },
+  "socialProof": {
+    "notifications": [
+      {
+        "title": "Sarah du Cabinet d'Avocats",
+        "description": "vient de s'inscrire pour un audit SEO · il y a 2 min"
+      },
+      {
+        "title": "James de la Compagnie d'Assurance",
+        "description": "a demandé un devis · il y a 8 min"
+      },
+      {
+        "title": "Dr. Amma de la Clinique",
+        "description": "a téléchargé la liste de contrôle SEO · il y a 15 min"
+      },
+      {
+        "title": "Propriétés Kwame",
+        "description": "a lancé une campagne WhatsApp · il y a 22 min"
+      },
+      {
+        "title": "Grace de l'Hôtel",
+        "description": "a réservé un appel découverte · il y a 30 min"
+      }
+    ]
+  },
+  "payment": {
+    "title": "Méthodes de Paiement Acceptées",
+    "mobileMoney": "Mobile Money (Orange Money, MTN MoMo, Wave)",
+    "card": "Cartes Bancaires",
+    "bank": "Virement Bancaire"
+  },
+  "common": {
+    "skipToContent": "Passer au contenu principal",
+    "slide": "Diapositive",
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "notFound": "Page Non Trouvée",
+    "notFoundDescription": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "errorTitle": "Une erreur est survenue",
+    "tryAgain": "Réessayer",
+    "backToHome": "Retour à l'Accueil"
+  }
+}
