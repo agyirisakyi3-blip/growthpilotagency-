@@ -1,0 +1,17 @@
+node_modules
+.next
+.git
+.gitignore
+.env
+.env.example
+*.md
+.eslintrc*
+.prettierrc*
+.pnp
+.pnp.js
+.yarn
+.yarnrc
+.vscode
+.idea
+*.tsbuildinfo
+next-env.d.ts
