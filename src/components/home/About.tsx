@@ -33,12 +33,12 @@ export function About() {
           >
             <div className="w-full aspect-[4/5] rounded-2xl bg-secondary overflow-hidden">
               <Image
-                src="/agyiri.png"
-                alt={t("title")}
+                src="/growth_logo.png"
+                alt={t("name")}
                 width={400}
                 height={533}
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain p-8"
               />
             </div>
             <div className="absolute -bottom-3 -right-3 w-20 h-20 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm shadow-sm">

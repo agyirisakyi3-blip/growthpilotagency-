@@ -19,11 +19,22 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: study.title,
     description: study.metaDescription,
-    alternates: { canonical: `/${locale}/case-studies/${slug}` },
+    alternates: {
+      canonical: `/${locale}/case-studies/${slug}`,
+      languages: {
+        en: `/en/case-studies/${slug}`,
+        fr: `/fr/case-studies/${slug}`,
+      },
+    },
     openGraph: {
       title: study.title,
       description: study.metaDescription,
       url: `https://growthpilotagency.com/${locale}/case-studies/${slug}`,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "GrowthPilot Agency" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/og.png"],
     },
   };
 }

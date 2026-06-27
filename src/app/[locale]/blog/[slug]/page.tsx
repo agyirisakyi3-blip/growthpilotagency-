@@ -15,11 +15,22 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `/${locale}/blog/${slug}` },
+    alternates: {
+      canonical: `/${locale}/blog/${slug}`,
+      languages: {
+        en: `/en/blog/${slug}`,
+        fr: `/fr/blog/${slug}`,
+      },
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       url: `https://growthpilotagency.com/${locale}/blog/${slug}`,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "GrowthPilot Agency" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/og.png"],
     },
   };
 }

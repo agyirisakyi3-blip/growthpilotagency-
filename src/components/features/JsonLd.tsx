@@ -10,7 +10,7 @@ function buildSchemas(locale: string) {
     url: baseUrl,
     logo: `${baseUrl}/og.png`,
     description:
-      "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation.",
+      "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation.",
     foundingDate: "2023",
     founder: { "@type": "Person", name: "Agyiri Sakyi" },
     contactPoint: {
@@ -41,7 +41,7 @@ function buildSchemas(locale: string) {
     name: "GrowthPilot Agency",
     url: baseUrl,
     description:
-      "SEO, web design, AI automation, and lead generation agency helping businesses grow faster.",
+      "SEO & GEO, web design, AI automation, and lead generation agency helping businesses grow faster.",
     inLanguage,
     potentialAction: {
       "@type": "SearchAction",
@@ -92,7 +92,7 @@ function buildSchemas(locale: string) {
       "@type": "OfferCatalog",
       name: "GrowthPilot Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO Services" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO & GEO Services" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Design" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Automation" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "WhatsApp Automation" } },

@@ -86,6 +86,41 @@ export interface Subscriber {
   createdAt: Date;
 }
 
+export interface WhatsAppContact {
+  id: string;
+  waId: string;
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  status: string;
+  serviceInterest: string;
+  notes: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface WhatsAppConversation {
+  id: string;
+  contactId: string;
+  contact: WhatsAppContact;
+  status: string;
+  intent: string;
+  createdAt: Date;
+  updatedAt: Date;
+  messages: WhatsAppMessage[];
+}
+
+export interface WhatsAppMessage {
+  id: string;
+  conversationId: string;
+  fromMe: boolean;
+  content: string;
+  type: string;
+  metadata: string;
+  createdAt: Date;
+}
+
 export interface EmailLog {
   id: string;
   recipient: string;

@@ -5,8 +5,8 @@
     "caseStudies": "Études de Cas",
     "team": "Équipe",
     "contact": "Contact",
-    "freeSeoAudit": "Audit SEO Gratuit",
-    "getFreeSeoAudit": "Obtenir un Audit SEO Gratuit",
+    "freeSeoAudit": "Audit SEO & GEO Gratuit",
+    "getFreeSeoAudit": "Obtenir un Audit SEO & GEO Gratuit",
     "switchToLight": "Passer en mode clair",
     "switchToDark": "Passer en mode sombre",
     "openMenu": "Ouvrir le menu de navigation",
@@ -14,7 +14,7 @@
     "home": "GrowthPilot Agency - Accueil"
   },
   "hero": {
-    "metaDescription": "Nous aidons les entreprises à se développer plus rapidement grâce au SEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp. Obtenez plus de leads, de clients et de ventes.",
+    "metaDescription": "Nous aidons les entreprises à se développer plus rapidement grâce au SEO & GEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp. Obtenez plus de leads, de clients et de ventes.",
     "previous": "Diapositive précédente",
     "next": "Diapositive suivante",
     "slide": "Diapositive",
@@ -23,11 +23,11 @@
     "turnaround": "Livraison sous 24h",
     "slides": [
       {
-        "badge": "Services SEO",
-        "headline1": "Dominez les Résultats de Recherche",
-        "headline2": "Générez du Trafic Organique",
-        "headline3": "& des Leads Qualifiés",
-        "description": "Des stratégies SEO basées sur les données qui placent votre entreprise en première page et génèrent des leads qualifiés en continu.",
+        "badge": "Services SEO & GEO",
+        "headline1": "Dominez les Classements de Recherche & IA",
+        "headline2": "Générez du Trafic depuis Google",
+        "headline3": "& les Moteurs d'IA Générative",
+        "description": "Des stratégies SEO & GEO basées sur les données qui placent votre entreprise en première page et génèrent des leads qualifiés en continu.",
         "cta": "Améliorez Votre Classement",
         "cta2": "En Savoir Plus"
       },
@@ -73,31 +73,34 @@
     "badge": "Nos Services",
     "title": "Tout ce dont Vous Avez Besoin pour",
     "highlight": "Grandir en Ligne",
-    "description": "Du SEO à l'automatisation IA, nous fournissons des solutions de croissance numérique de bout en bout adaptées à votre entreprise.",
+    "description": "Du SEO & GEO à l'automatisation IA, nous fournissons des solutions de croissance numérique de bout en bout adaptées à votre entreprise.",
     "list": [
       {
-        "title": "Services SEO",
-        "description": "Dominez les classements de recherche avec des stratégies SEO basées sur les données qui génèrent du trafic organique et des leads qualifiés.",
+        "title": "Services SEO & GEO",
+        "description": "Dominez les classements de recherche et d'IA générative avec des stratégies basées sur les données qui génèrent du trafic organique et des leads qualifiés.",
         "benefits": [
           "Recherche & stratégie de mots-clés",
           "SEO on-page & technique",
-          "Netlinking & autorité",
+          "GEO (Optimisation pour Moteurs d'IA Générative)",
           "Stratégie de contenu"
         ],
         "cta": "Améliorez Votre Classement",
         "slug": "seo-services",
-        "detailedDescription": "Nos services SEO sont basés sur les données, pas sur les suppositions. Nous effectuons une recherche approfondie de mots-clés, des audits techniques de site et une analyse concurrentielle pour créer une stratégie personnalisée qui place votre entreprise en première page de Google. De l'optimisation on-page au netlinking d'autorité, chaque tactique est conçue pour générer une croissance organique mesurable.",
+        "image": "/seo-services.avif",
+        "detailedDescription": "Nos services SEO & GEO sont basés sur les données, pas sur les suppositions. Nous optimisons votre entreprise à la fois pour les moteurs de recherche traditionnels (Google, Bing) et les moteurs d'IA générative (ChatGPT, Gemini, Perplexity). De la recherche approfondie de mots-clés et des audits techniques de site aux données structurées et au contenu optimisé pour l'IA, chaque tactique est conçue pour générer une croissance organique mesurable sur tous les canaux de découverte.",
         "process": [
-          { "step": "Découverte & Audit", "description": "Nous analysons votre site web, vos concurrents et votre marché cible pour identifier les opportunités et les lacunes." },
-          { "step": "Développement de la Stratégie", "description": "Une feuille de route SEO personnalisée construite autour de mots-clés à forte valeur, de correctifs techniques et d'opportunités de contenu." },
-          { "step": "Optimisation On-Page", "description": "Balises meta, optimisation du contenu, maillage interne et mise en œuvre du balisage schema." },
+          { "step": "Audit & Découverte", "description": "Nous analysons votre site web, vos concurrents et votre marché cible pour identifier les opportunités sur les moteurs de recherche et d'IA." },
+          { "step": "Développement de la Stratégie", "description": "Une feuille de route SEO & GEO personnalisée construite autour de mots-clés à forte valeur, de correctifs techniques et d'opportunités de contenu alignées sur l'IA." },
+          { "step": "Optimisation On-Page & IA", "description": "Balises meta, données structurées, optimisation du contenu et balisage schema pour les moteurs de recherche et les robots d'IA." },
           { "step": "SEO Technique", "description": "Vitesse du site, convivialité mobile, optimisation du crawl et amélioration des Core Web Vitals." },
+          { "step": "Implémentation GEO", "description": "Contenu faisant autorité, optimisation Q&R, construction de citations et SEO basé sur les entités pour la visibilité dans les moteurs génératifs." },
           { "step": "Netlinking & Autorité", "description": "Obtenez des backlinks de haute qualité grâce aux relations publiques numériques, aux articles invités et au marketing de contenu." },
-          { "step": "Suivi & Reporting", "description": "Rapports mensuels transparents avec classements de mots-clés, données de trafic et informations actionnables." }
+          { "step": "Suivi & Reporting", "description": "Rapports mensuels transparents avec classements de mots-clés, suivi des mentions IA, données de trafic et informations actionnables." }
         ],
         "faq": [
-          { "q": "Combien de temps faut-il pour voir les résultats du SEO ?", "a": "La plupart des clients constatent des améliorations significatives en 3 à 6 mois. Cependant, les premiers gains comme les correctifs techniques et les optimisations SEO locales peuvent montrer un impact en 4 à 6 semaines." },
-          { "q": "Garantissez-vous les classements en page 1 ?", "a": "Aucune agence réputée ne peut garantir la première place, car l'algorithme de Google est complexe et en constante évolution. Nous garantissons des stratégies basées sur les données, des rapports transparents et une optimisation continue pour maximiser votre potentiel de classement." },
+          { "q": "Combien de temps faut-il pour voir les résultats du SEO & GEO ?", "a": "La plupart des clients constatent des améliorations significatives en 3 à 6 mois. Cependant, les premiers gains comme les correctifs techniques, les optimisations SEO locales et les gains rapides GEO peuvent montrer un impact en 4 à 6 semaines." },
+          { "q": "Garantissez-vous les classements en page 1 ?", "a": "Aucune agence réputée ne peut garantir la première place, car l'algorithme de Google est complexe et en constante évolution. Nous garantissons des stratégies basées sur les données, des rapports transparents et une optimisation continue pour maximiser votre potentiel de classement sur les moteurs de recherche et les plateformes d'IA." },
+          { "q": "Qu'est-ce que le GEO (Optimisation pour Moteurs d'IA Générative) ?", "a": "Le GEO est la pratique qui consiste à optimiser votre contenu pour être cité par les moteurs de recherche alimentés par l'IA comme ChatGPT, Google Gemini et Perplexity. Cela implique des données structurées, des citations faisant autorité, une optimisation Q&R et un SEO basé sur les entités pour garantir que votre marque apparaît dans les réponses générées par l'IA." },
           { "q": "Dans quels secteurs êtes-vous spécialisé ?", "a": "Nous travaillons dans les secteurs juridique, assurance, santé, immobilier, hôtellerie, éducation et e-commerce. Nos stratégies sont adaptées au paysage concurrentiel unique de chaque secteur." }
         ]
       },
@@ -112,6 +115,7 @@
         ],
         "cta": "Obtenez Votre Site",
         "slug": "website-design",
+        "image": "/website-design.jpg",
         "detailedDescription": "Votre site web est votre vitrine numérique. Nous construisons des sites web haute performance utilisant Next.js et des frameworks modernes qui chargent instantanément, se classent mieux sur Google et convertissent les visiteurs en clients. Chaque site que nous construisons est entièrement responsive, accessible et optimisé pour la meilleure expérience utilisateur sur tous les appareils.",
         "process": [
           { "step": "Découverte & Planification", "description": "Nous découvrons votre marque, votre audience et vos objectifs pour créer un plan de projet détaillé." },
@@ -138,6 +142,7 @@
         ],
         "cta": "Automatisez Maintenant",
         "slug": "ai-automation",
+        "image": "/ai-automation.jpg",
         "detailedDescription": "L'automatisation basée sur l'IA transforme la façon dont les entreprises fonctionnent. Nous concevons et mettons en œuvre des systèmes intelligents qui gèrent les tâches répétitives, génèrent du contenu, gèrent les interactions clients et optimisent vos flux de travail. Des chatbots personnalisés aux pipelines de reporting automatisés, nous vous aidons à faire plus avec moins.",
         "process": [
           { "step": "Audit des Processus", "description": "Nous cartographions vos flux de travail actuels pour identifier les opportunités d'automatisation à fort impact." },
@@ -163,6 +168,7 @@
         ],
         "cta": "Démarrer la Conversation",
         "slug": "whatsapp-automation",
+        "image": "/whatsapp-automation.png",
         "detailedDescription": "WhatsApp est la plateforme de messagerie la plus utilisée en Afrique de l'Ouest. Nous aidons les entreprises à automatiser leur communication WhatsApp — des réponses automatiques instantanées et la qualification intelligente des leads aux campagnes de diffusion et à l'intégration CRM complète. Ne manquez plus jamais un lead.",
         "process": [
           { "step": "Collecte des Exigences", "description": "Nous analysons vos besoins de communication, votre volume et vos flux de travail existants." },
@@ -188,6 +194,7 @@
         ],
         "cta": "Obtenez des Leads",
         "slug": "lead-generation",
+        "image": "/lead-generation.jpg",
         "detailedDescription": "Arrêtez de courir après les leads — laissez-les venir à vous. Nos stratégies de génération de leads multicanal combinent des campagnes publicitaires ciblées, des pages de destination à fort taux de conversion, des campagnes email et des suivis automatisés pour remplir votre pipeline de prospects qualifiés prêts à acheter.",
         "process": [
           { "step": "Analyse de l'Audience Cible", "description": "Définir le profil de votre client idéal et identifier les meilleurs canaux pour l'atteindre." },
@@ -198,13 +205,13 @@
         ],
         "faq": [
           { "q": "À combien de leads puis-je m'attendre ?", "a": "Les résultats varient selon le secteur et le budget, mais nos clients constatent généralement une augmentation de 200 à 400 % des leads qualifiés dans les 60 premiers jours." },
-          { "q": "Quels canaux utilisez-vous ?", "a": "Nous utilisons une combinaison de Google Ads, publicités Facebook/Instagram, outreach LinkedIn, email marketing, SEO et campagnes WhatsApp en fonction de votre audience cible." },
+          { "q": "Quels canaux utilisez-vous ?", "a": "Nous utilisons une combinaison de Google Ads, publicités Facebook/Instagram, outreach LinkedIn, email marketing, SEO & GEO et campagnes WhatsApp en fonction de votre audience cible." },
           { "q": "Comment qualifiez-vous les leads ?", "a": "Nous utilisons une qualification en plusieurs étapes incluant des champs de formulaire, un scoring automatisé et un suivi comportemental pour vous assurer de ne recevoir que des prospects à forte intention." }
         ]
       },
       {
         "title": "SEO Local",
-        "description": "Dominez les résultats de recherche locaux et Google Maps pour attirer plus de clients à proximité de votre entreprise.",
+        "description": "Dominez les résultats de recherche locaux et les recommandations IA locales pour attirer plus de clients à proximité de votre entreprise.",
         "benefits": [
           "Profil Google Business",
           "Citations locales",
@@ -213,7 +220,7 @@
         ],
         "cta": "Devenez Local",
         "slug": "local-seo",
-        "detailedDescription": "Si vous servez des clients dans une zone géographique spécifique, le SEO Local est votre canal de croissance le plus puissant. Nous optimisons votre profil Google Business, construisons des citations locales, gérons les avis et créons du contenu spécifique à la localisation pour garantir que votre entreprise apparaît en haut des résultats de recherche locaux et de Google Maps.",
+        "detailedDescription": "Si vous servez des clients dans une zone géographique spécifique, le SEO Local est votre canal de croissance le plus puissant. Nous optimisons votre profil Google Business, construisons des citations locales, gérons les avis et créons du contenu spécifique à la localisation pour garantir que votre entreprise apparaît en haut des résultats de recherche locaux, de Google Maps et des recommandations locales générées par l'IA.",
         "process": [
           { "step": "Audit Local", "description": "Examen complet de votre présence actuelle dans les recherches locales et du paysage concurrentiel." },
           { "step": "Optimisation du Profil Google Business", "description": "Optimisation complète de votre GBP avec des informations précises, catégories, photos et publications." },
@@ -222,7 +229,7 @@
           { "step": "Contenu Local & Suivi", "description": "Création de contenu spécifique à la localisation et suivi continu des classements pour les mots-clés locaux." }
         ],
         "faq": [
-          { "q": "Combien de temps prend le SEO Local ?", "a": "Les améliorations du SEO Local peuvent montrer des résultats en 4 à 8 semaines, en particulier les optimisations du profil Google Business et le nettoyage des citations." },
+          { "q": "Combien de temps prend le SEO & GEO Local ?", "a": "Les améliorations du SEO & GEO Local peuvent montrer des résultats en 4 à 8 semaines, en particulier les optimisations du profil Google Business et le nettoyage des citations." },
           { "q": "Travaillez-vous avec des entreprises multi-sites ?", "a": "Oui. Nous avons des stratégies pour les entreprises avec plusieurs emplacements, incluant des pages optimisées pour chaque site et du netlinking local." },
           { "q": "Qu'est-ce qui est inclus dans l'optimisation du profil Google Business ?", "a": "Configuration/optimisation complète du profil, sélection de catégories, configuration du menu de services, téléchargement de photos/vidéos, stratégie de publication et gestion des questions-réponses." }
         ]
@@ -342,13 +349,13 @@
         "process": [
           { "step": "Définition de la Voix de la Marque", "description": "Établir le ton, le style et les directives de messagerie de votre marque pour un contenu cohérent." },
           { "step": "Stratégie de Contenu", "description": "Calendrier éditorial couvrant les articles de blog, le contenu social, les vidéos et les supports marketing." },
-          { "step": "Copywriting & Blogging", "description": "Articles optimisés SEO, copy de site web, séquences d'emails et textes publicitaires." },
+          { "step": "Copywriting & Blogging", "description": "Articles optimisés SEO & GEO, copy de site web, séquences d'emails et textes publicitaires." },
           { "step": "Production Visuelle & Vidéo", "description": "Design graphique professionnel et création de vidéos courtes pour les réseaux sociaux et les publicités." },
           { "step": "Revue de Performance", "description": "Suivre les métriques d'engagement, de trafic et de conversion pour affiner la stratégie de contenu." }
         ],
         "faq": [
           { "q": "Quelle quantité de contenu produisez-vous ?", "a": "Nous produisons généralement 4 à 8 articles de blog par mois, 15 à 20 graphiques pour les réseaux sociaux et 4 à 8 vidéos courtes — le tout adapté à vos besoins et budget spécifiques." },
-          { "q": "Optimisez-vous le contenu pour le SEO ?", "a": "Oui. Chaque contenu écrit est optimisé avec une recherche de mots-clés, des titres appropriés, des descriptions meta et une structure de maillage interne." },
+          { "q": "Optimisez-vous le contenu pour le SEO & GEO ?", "a": "Oui. Chaque contenu écrit est optimisé avec une recherche de mots-clés, des titres appropriés, des descriptions meta, des données structurées et une structure de maillage interne pour les moteurs de recherche et les plateformes d'IA." },
           { "q": "Pouvez-vous correspondre à la voix de notre marque ?", "a": "Absolument. Nous commençons par une analyse approfondie de la voix de votre marque et créons un guide de style avant de produire tout contenu. La voix unique de votre marque est notre priorité absolue." }
         ]
       },
@@ -418,7 +425,7 @@
           { "step": "Audit de Réputation", "description": "Évaluation complète de votre réputation en ligne actuelle sur toutes les plateformes." },
           { "step": "Configuration de la Surveillance", "description": "Mettre en œuvre des outils et processus pour suivre les avis, les mentions et le sentiment en temps réel." },
           { "step": "Gestion des Avis", "description": "Approche systématique pour générer des avis positifs et répondre professionnellement aux avis négatifs." },
-          { "step": "Stratégie de Contenu & SEO", "description": "Création de contenu positif et SEO pour repousser les résultats négatifs et contrôler votre narrative." },
+          { "step": "Stratégie de Contenu & SEO & GEO", "description": "Création de contenu positif et SEO/GEO pour repousser les résultats négatifs et contrôler votre narrative." },
           { "step": "Reporting Continu", "description": "Rapports de réputation mensuels avec tendances des avis, analyse de sentiment et recommandations." }
         ],
         "faq": [
@@ -529,7 +536,7 @@
       },
       {
         "name": "Courtiers en Assurance",
-        "description": "Générez des leads d'assurance qualifiés grâce au SEO ciblé et aux suivis automatisés."
+        "description": "Générez des leads d'assurance qualifiés grâce au SEO & GEO ciblé et aux suivis automatisés."
       },
       {
         "name": "ONG",
@@ -537,7 +544,7 @@
       },
       {
         "name": "Hôtels",
-        "description": "Stimulez les réservations directes avec le SEO local, un design web époustouflant et une sensibilisation automatisée des clients."
+        "description": "Stimulez les réservations directes avec le SEO & GEO local, un design web époustouflant et une sensibilisation automatisée des clients."
       },
       {
         "name": "Écoles",
@@ -551,7 +558,7 @@
   },
   "caseStudies": {
     "metaTitle": "Études de Cas",
-    "metaDescription": "Découvrez comment GrowthPilot Agency a transformé des entreprises grâce au SEO, à l'automatisation IA et au design web. Des résultats réels pour des entreprises réelles.",
+    "metaDescription": "Découvrez comment GrowthPilot Agency a transformé des entreprises grâce au SEO & GEO, à l'automatisation IA et au design web. Des résultats réels pour des entreprises réelles.",
     "badge": "Études de Cas",
     "title": "Des Résultats Réels pour",
     "highlight": "des Entreprises Réelles",
@@ -577,7 +584,7 @@
       {
         "title": "Transformation de la Génération de Leads pour Cabinet d'Avocats",
         "slug": "law-firm-lead-generation",
-        "metaDescription": "Comment nous avons transformé un cabinet d'avocats de 5 à 200+ leads organiques par mois grâce au SEO, à la stratégie de contenu et à l'optimisation technique.",
+        "metaDescription": "Comment nous avons transformé un cabinet d'avocats de 5 à 200+ leads organiques par mois grâce au SEO & GEO, à la stratégie de contenu et à l'optimisation technique.",
         "industry": "Services Juridiques",
         "before": "Dépendait uniquement des recommandations, présence en ligne minimale, 5 leads organiques/mois.",
         "after": "Présence de recherche dominante, 200+ leads organiques/mois, 40% provenant du SEO.",
@@ -616,10 +623,10 @@
     ]
   },
   "seoAudit": {
-    "badge": "Audit SEO Gratuit",
+    "badge": "Audit SEO & GEO Gratuit",
     "title": "Obtenez Votre",
-    "highlight": "Rapport d'Audit SEO Gratuit",
-    "description": "Découvrez exactement ce qui empêche votre site web de bien se classer sur Google. Nous analyserons votre site et vous enverrons un rapport détaillé avec des recommandations actionnables.",
+    "highlight": "Rapport d'Audit SEO & GEO Gratuit",
+    "description": "Découvrez exactement ce qui empêche votre site web de bien se classer sur Google et les moteurs d'IA générative. Nous analyserons votre site et vous enverrons un rapport détaillé avec des recommandations actionnables.",
     "benefits": [
       "Analyse technique complète du site web",
       "Analyse comparative des concurrents",
@@ -638,7 +645,7 @@
       "companyPlaceholder": "Votre Entreprise SARL",
       "website": "URL du Site Web",
       "websitePlaceholder": "https://votresite.com",
-      "submit": "Obtenir Mon Audit SEO Gratuit",
+      "submit": "Obtenir Mon Audit SEO & GEO Gratuit",
       "processing": "Traitement en cours...",
       "privacy": "Pas de spam. Désabonnez-vous à tout moment. Vos données sont en sécurité avec nous."
     },
@@ -678,23 +685,23 @@
     ]
   },
   "about": {
-    "badge": "À Propos",
-    "name": "Agyiri Sakyi",
-    "title": "Développeur Web, Spécialiste SEO & Consultant en Automatisation IA",
-    "description": "Avec plus de 7 ans d'expérience, j'ai aidé 50+ entreprises dans plusieurs secteurs à transformer leur présence numérique et à réaliser une croissance mesurable. Mon approche combine expertise technique et stratégies basées sur l'IA pour fournir des résultats qui comptent.",
+    "badge": "À Propos de l'Entreprise",
+    "name": "GrowthPilot Agency",
+    "title": "Agence SEO & GEO, Développement Web & Automatisation IA",
+    "description": "Nous aidons les entreprises à croître plus rapidement grâce au SEO & GEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp. Avec plus de 7 ans d'expérience et 50+ projets réussis, notre équipe combine expertise technique et stratégies basées sur l'IA pour offrir une croissance mesurable à nos clients.",
     "years": "7+ ans",
     "skills": [
-      "SEO",
-      "Next.js",
-      "React",
-      "WordPress",
-      "Cloud Tech",
+      "SEO & GEO",
+      "Développement Web",
       "Automatisation IA",
-      "Génération de Leads"
+      "Génération de Leads",
+      "Solutions Cloud",
+      "Stratégie Digitale",
+      "Marketing WhatsApp"
     ]
   },
   "team": {
-    "metaTitle": "Notre Équipe | GrowthPilot Agency",
+    "metaTitle": "Notre Équipe",
     "metaDescription": "Rencontrez les experts derrière GrowthPilot Agency — une équipe de stratèges, développeurs et esprits créatifs dédiés à votre croissance.",
     "pageTitle": "Notre Équipe",
     "pageDescription": "Rencontrez les experts derrière GrowthPilot Agency — une équipe de stratèges, développeurs et esprits créatifs dédiés à votre croissance.",
@@ -739,7 +746,7 @@
     ]
   },
   "footer": {
-    "description": "Nous aidons les entreprises à croître plus rapidement grâce au SEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp.",
+    "description": "Nous aidons les entreprises à croître plus rapidement grâce au SEO & GEO, aux sites web à fort taux de conversion, à l'automatisation IA et à la génération de leads WhatsApp.",
     "services": "Services",
     "company": "Entreprise",
     "industries": "Secteurs",
@@ -749,7 +756,7 @@
     "privacyPolicy": "Politique de Confidentialité",
     "termsOfService": "Conditions d'Utilisation",
     "serviceLinks": {
-      "seo": "Services SEO",
+      "seo": "Services SEO & GEO",
       "website": "Conception de Sites Web",
       "ai": "Automatisation IA",
       "whatsapp": "Automatisation WhatsApp",
@@ -790,7 +797,7 @@
     "phone": "Téléphone",
     "location": "Adresse",
     "responseTime": "Délai de Réponse",
-    "responseTimeValue": "Sous 24 heures",
+    "responseTimeValue": "Sous 1 à 2 heures",
     "successTitle": "Message Envoyé !",
     "successMessage": "Message envoyé avec succès !",
     "sendAnother": "Envoyer un Autre Message",
@@ -879,7 +886,7 @@
       },
       {
         "heading": "2. Description des Services",
-        "content": "GrowthPilot Agency fournit des services de marketing numérique incluant mais sans s'y limiter le SEO, la conception de sites web, l'automatisation IA, l'automatisation WhatsApp et la génération de leads. La portée, les livrables et le calendrier de chaque projet seront définis dans une convention de service distincte."
+        "content": "GrowthPilot Agency fournit des services de marketing numérique incluant mais sans s'y limiter le SEO & GEO, la conception de sites web, l'automatisation IA, l'automatisation WhatsApp et la génération de leads. La portée, les livrables et le calendrier de chaque projet seront définis dans une convention de service distincte."
       },
       {
         "heading": "3. Responsabilités de l'Utilisateur",
@@ -923,7 +930,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Conseils, astuces et stratégies sur le SEO, l'automatisation IA, le design web et le marketing numérique de la part de l'équipe GrowthPilot Agency.",
+    "metaDescription": "Conseils, astuces et stratégies sur le SEO & GEO, l'automatisation IA, le design web et le marketing numérique de la part de l'équipe GrowthPilot Agency.",
     "badge": "Notre Blog",
     "title": "Dernières",
     "highlight": "Actualités",
@@ -943,7 +950,7 @@
   },
   "exitIntent": {
     "badge": "Téléchargement Gratuit",
-    "title": "Obtenez Votre Liste de Contrôle SEO Gratuite",
+    "title": "Obtenez Votre Liste de Contrôle SEO & GEO Gratuite",
     "description": "Liste de contrôle en 27 points utilisée par notre équipe pour classer 50+ entreprises en page 1 de Google. Entrez votre email et nous vous l'enverrons instantanément.",
     "benefits": [
       "Analyse technique complète du site web",

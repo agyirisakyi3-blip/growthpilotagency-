@@ -74,7 +74,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: true,
-        message: "Message sent successfully! We'll get back to you within 24 hours.",
+        message: "Message sent successfully! We'll get back to you within 1-2 hours.",
         emailSent: !emailFailed,
       },
       { status: 201 }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowthPilot Agency — Flyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:#e8eaf0;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:40px 20px}
+  .flyer{max-width:420px;width:100%;background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.15);position:relative}
+  .header{background:linear-gradient(135deg,#0f2d5a 0%,#1a4a8a 50%,#2d6bcb 100%);padding:36px 32px 28px;position:relative;overflow:hidden}
+  .header::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.04)}
+  .header::after{content:'';position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.03)}
+  .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);backdrop-filter:blur(4px);padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600;color:#fbbf24;letter-spacing:.3px;text-transform:uppercase;margin-bottom:16px}
+  .badge svg{width:12px;height:12px}
+  .header h1{font-size:32px;font-weight:900;color:#fff;line-height:1.15;letter-spacing:-.5px;margin-bottom:8px}
+  .header h1 span{background:linear-gradient(135deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .header p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.5;max-width:300px}
+  .body{padding:24px 32px 24px}
+  .section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#0f2d5a;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#0f2d5a20,transparent)}
+  .services{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+  .service{display:flex;align-items:center;gap:12px;padding:10px 14px;background:#f8f9fc;border-radius:12px;transition:.2s}
+  .service:hover{background:#eef1f8}
+  .service-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+  .service-info{flex:1}
+  .service-info h3{font-size:13px;font-weight:700;color:#0f2d5a;line-height:1.3}
+  .service-info p{font-size:10.5px;color:#6b7280;line-height:1.4;margin-top:1px}
+  .service-arrow{color:#cbd5e1;font-size:14px;transition:.2s}
+  .service:hover .service-arrow{color:#0f2d5a;transform:translateX(3px)}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,#e5e7eb,transparent);margin:18px 0}
+  .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px}
+  .stat{padding:14px 10px;border-radius:14px;text-align:center}
+  .stat-value{font-size:20px;font-weight:800;color:#fff;line-height:1}
+  .stat-label{font-size:9px;font-weight:500;color:rgba(255,255,255,.7);margin-top:4px;text-transform:uppercase;letter-spacing:.3px}
+  .stat:nth-child(1){background:linear-gradient(135deg,#0f2d5a,#1a4a8a)}
+  .stat:nth-child(2){background:linear-gradient(135deg,#1a4a8a,#2d6bcb)}
+  .stat:nth-child(3){background:linear-gradient(135deg,#2d6bcb,#4b8fd8)}
+  .testimonial{background:linear-gradient(135deg,#fffbeb,#fff);border:1px solid #fde68a;border-radius:14px;padding:16px;margin-bottom:20px;position:relative}
+  .testimonial::before{content:'"';position:absolute;top:4px;left:12px;font-size:40px;color:#fbbf24;font-weight:900;line-height:1;font-family:Georgia,serif}
+  .testimonial p{font-size:12px;color:#4b5563;line-height:1.5;font-style:italic;padding-left:14px}
+  .testimonial .author{font-size:10px;font-weight:600;color:#0f2d5a;margin-top:6px;padding-left:14px}
+  .cta-section{display:flex;gap:10px}
+  .cta-primary{flex:1;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#0f2d5a,#1a4a8a);color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:.2s;text-align:center;text-decoration:none;display:block}
+  .cta-primary:hover{transform:translateY(-1px);box-shadow:0 8px 25px rgba(15,45,90,.3)}
+  .cta-secondary{flex:1;padding:14px;border:1.5px solid #e5e7eb;border-radius:12px;background:#fff;color:#0f2d5a;font-size:13px;font-weight:600;cursor:pointer;transition:.2s;text-align:center;text-decoration:none;display:block}
+  .cta-secondary:hover{border-color:#0f2d5a;background:#f8f9fc}
+  .footer{background:#0f2d5a;padding:20px 32px;display:flex;justify-content:space-between;align-items:center}
+  .footer .info{display:flex;flex-direction:column;gap:4px}
+  .footer .info span{font-size:10.5px;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:6px}
+  .footer .info span strong{color:#fff;font-weight:600}
+  .footer .logo{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fbbf24}
+  @media print{body{padding:0;background:#fff}.flyer{box-shadow:none;border-radius:0;max-width:100%}.service:hover{background:#f8f9fc}.cta-primary:hover,.cta-secondary:hover{transform:none;box-shadow:none}}
+  @media(max-width:440px){.header{padding:28px 20px 22px}.header h1{font-size:26px}.body{padding:20px}.stats{gap:6px}.stat{padding:10px 6px}.footer{padding:16px 20px;flex-direction:column;gap:12px;text-align:center}}
+</style>
+</head>
+<body>
+
+<div class="flyer">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      GrowthPilot Agency
+    </div>
+    <h1>Your Growth<br><span>Accelerator</span></h1>
+    <p>Full-stack digital growth agency — data-driven SEO, high-converting websites, AI automation & lead generation.</p>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- Services -->
+    <div class="section-title">Our Services</div>
+    <div class="services">
+      <div class="service">
+        <div class="service-icon" style="background:#e8f0fe;color:#1a73e8">🔍</div>
+        <div class="service-info">
+          <h3>SEO Services</h3>
+          <p>Dominate search rankings with data-driven strategies</p>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service">
+        <div class="service-icon" style="background:#fef3e2;color:#ea580c">🎨</div>
+        <div class="service-info">
+          <h3>Website Design</h3>
+          <p>High-converting Next.js sites that captivate & convert</p>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service">
+        <div class="service-icon" style="background:#e8f5e9;color:#16a34a">🤖</div>
+        <div class="service-info">
+          <h3>AI Automation</h3>
+          <p>Intelligent workflows, chatbots & content generation</p>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service">
+        <div class="service-icon" style="background:#f3e8ff;color:#9333ea">💬</div>
+        <div class="service-info">
+          <h3>WhatsApp Automation</h3>
+          <p>Auto-reply, broadcast & CRM-integrated lead nurturing</p>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service">
+        <div class="service-icon" style="background:#fce4ec;color:#e11d48">📈</div>
+        <div class="service-info">
+          <h3>Lead Generation</h3>
+          <p>Multi-channel campaigns that fill your pipeline</p>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+      <div class="service" style="border-top:1px dashed #e5e7eb;border-radius:0;padding-top:12px;margin-top:2px">
+        <div class="service-icon" style="background:#e0f2fe;color:#0284c7">🌐</div>
+        <div class="service-info">
+          <h3>Local SEO & Google Ads</h3>
+          <p>Google Business Profile, PPC & social media ads</p>
+        </div>
+        <span class="service-arrow">→</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">200+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">3×</div>
+        <div class="stat-label">Avg. Lead Increase</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">98%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="testimonial">
+      <p>GrowthPilot transformed our online presence. Our leads increased 4× in the first 60 days. Their SEO and website work is exceptional.</p>
+      <div class="author">— Sarah K., CEO, AccraTech Solutions</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <a href="https://growthpilotagency.com" class="cta-primary">Get Free Strategy Call →</a>
+      <a href="https://growthpilotagency.com/services" class="cta-secondary">View All Services</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="info">
+      <span><strong>GrowthPilot Agency</strong></span>
+      <span>📧 hello@growthpilotagency.com</span>
+      <span>🌍 growthpilotagency.com</span>
+    </div>
+    <div class="logo">GP</div>
+  </div>
+
+</div>
+
+</body>
+</html>

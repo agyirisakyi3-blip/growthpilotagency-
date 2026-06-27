@@ -3,7 +3,7 @@ import type { Service, Stat, Testimonial, Industry } from "./types";
 export const siteConfig = {
   name: "GrowthPilot Agency",
   description:
-    "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation.",
+    "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation.",
   url: "https://growthpilotagency.com",
   ogImage: "/og.png",
   links: {
@@ -14,15 +14,15 @@ export const siteConfig = {
 
 export const services: Service[] = [
   {
-    title: "SEO Services",
+    title: "SEO & GEO Services",
     slug: "seo-services",
     description:
-      "Dominate search rankings with data-driven SEO strategies that drive organic traffic and qualified leads.",
+      "Dominate search and AI-generated rankings with data-driven SEO & GEO strategies that drive organic traffic and qualified leads.",
     icon: "Search",
     benefits: [
       "Keyword research & strategy",
       "On-page & technical SEO",
-      "Link building & authority",
+      "GEO (Generative Engine Optimization)",
       "Content strategy",
     ],
     cta: "Boost Rankings",
@@ -227,7 +227,7 @@ export const industries: Industry[] = [
   {
     name: "Insurance Brokers",
     description:
-      "Generate qualified insurance leads through targeted SEO and automated follow-ups.",
+      "Generate qualified insurance leads through targeted SEO & GEO and automated follow-ups.",
     icon: "Shield",
   },
   {
@@ -239,7 +239,7 @@ export const industries: Industry[] = [
   {
     name: "Hotels",
     description:
-      "Drive direct bookings with local SEO, stunning web design, and automated guest outreach.",
+      "Drive direct bookings with local SEO & GEO, stunning web design, and automated guest outreach.",
     icon: "Building2",
   },
   {
@@ -299,7 +299,7 @@ export const caseStudies = [
     before:
       "Relied on referrals only, minimal online presence, 5 organic leads/month.",
     after:
-      "Dominant search presence, 200+ organic leads/month, 40% from SEO.",
+      "Dominant search presence, 200+ organic leads/month, 40% from SEO & GEO.",
     metrics: {
       "Traffic Increase": "380%",
       "Rankings Improved": "45 keywords in top 3",

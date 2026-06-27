@@ -49,7 +49,7 @@ export async function submitContact(formData: FormData) {
 
     return {
       success: true,
-      message: "Thank you! We'll get back to you within 24 hours.",
+      message: "Thank you! We'll get back to you within 1-2 hours.",
     };
   } catch (error) {
     console.error("Failed to submit contact:", error);

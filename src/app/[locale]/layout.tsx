@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import dynamic from "next/dynamic";
 import { NextIntlClientProvider } from "next-intl";
@@ -33,14 +34,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     title: {
-      default: "GrowthPilot Agency | SEO, Websites & AI Automation Agency",
+      default: "GrowthPilot Agency | SEO & GEO, Websites & AI Automation Agency",
       template: "%s | GrowthPilot Agency",
     },
     description:
-      "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation.",
+      "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation.",
     keywords: [
-      "SEO Agency", "Web Design Agency", "AI Automation Agency",
-      "Lead Generation Services", "Digital Marketing Agency", "Local SEO Services",
+      "SEO Agency", "GEO Agency", "Web Design Agency", "AI Automation Agency",
+      "Lead Generation Services", "Digital Marketing Agency", "Local SEO & GEO Services",
       "WhatsApp Marketing Agency", "Côte d'Ivoire Digital Agency",
       "Abidjan SEO Agency", "Agence SEO Abidjan", "Agence Marketing Digital Côte d'Ivoire",
     ],
@@ -60,16 +61,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === "fr" ? "fr_CI" : "en_US",
       url: "https://growthpilotagency.com",
       siteName: "GrowthPilot Agency",
-      title: "GrowthPilot Agency | SEO, Websites & AI Automation Agency",
+      title: "GrowthPilot Agency | SEO & GEO, Websites & AI Automation Agency",
       description:
-        "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation.",
+        "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation.",
       images: [{ url: "/og.png", width: 1200, height: 630, alt: "GrowthPilot Agency" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "GrowthPilot Agency | SEO, Websites & AI Automation Agency",
+      title: "GrowthPilot Agency | SEO & GEO, Websites & AI Automation Agency",
       description:
-        "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation.",
+        "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation.",
       images: ["/og.png"],
     },
     robots: {
@@ -96,8 +97,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
-      <script
+      <Script
         id="locale-init"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             document.documentElement.lang = '${locale}';

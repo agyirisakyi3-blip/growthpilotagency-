@@ -53,7 +53,7 @@ export function WelcomeEmail({ name }: { name: string }) {
         Thank you for reaching out to GrowthPilot Agency. We&rsquo;re excited to work with you.
       </Text>
       <Text style={p}>
-        Our team will review your inquiry and get back to you within 24 hours with a
+        Our team will review your inquiry and get back to you within 1-2 hours with a
         personalized strategy tailored to your business goals.
       </Text>
       <Text style={p}>
@@ -64,7 +64,7 @@ export function WelcomeEmail({ name }: { name: string }) {
       <Text style={p}>
         Best regards,<br />
         <strong>Agyiri Sakyi</strong><br />
-        Founder &amp; CEO, GrowthPilot Agency
+        Software Engineer, GrowthPilot Agency
       </Text>
     </BaseLayout>
   );
@@ -77,7 +77,7 @@ export function ContactConfirmationEmail({ name, message }: { name: string; mess
       <Text style={p}>Hi {name},</Text>
       <Text style={p}>
         Thank you for contacting GrowthPilot Agency. We&rsquo;ve received your message and will
-        respond within 24 hours.
+        respond within 1-2 hours.
       </Text>
       <Section style={quoteBox}>
         <Text style={quoteLabel}>Your message:</Text>
@@ -98,11 +98,11 @@ export function NewsletterConfirmationEmail({ email }: { email: string }) {
         Thanks for subscribing to GrowthPilot Agency updates at <strong>{email}</strong>.
       </Text>
       <Text style={p}>
-        You&rsquo;ll receive our latest insights on SEO, AI automation, and digital growth
+        You&rsquo;ll receive our latest insights on SEO & GEO, AI automation, and digital growth
         strategies straight to your inbox.
       </Text>
       <Text style={p}>
-        Keep an eye out for your free SEO checklist &mdash; it&rsquo;s on its way!
+        Keep an eye out for your free SEO & GEO checklist &mdash; it&rsquo;s on its way!
       </Text>
     </BaseLayout>
   );

@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     const adminEmail = process.env.ADMIN_EMAIL || process.env.EMAIL_TO || "agyirisakyi3@gmail.com";
     await sendEmail({
       to: adminEmail,
-      subject: "New SEO Checklist Subscriber",
+      subject: "New SEO & GEO Checklist Subscriber",
       html: `<p>New subscriber: <strong>${cleanEmail}</strong></p><p>Source: ${source || "website"}</p>`,
     });
 

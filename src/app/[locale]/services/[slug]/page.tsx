@@ -216,7 +216,7 @@ export default function ServiceDetailPage({ params }: Props) {
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link href="/#seo-audit">
-                Get Free SEO Audit
+                Get Free SEO & GEO Audit
               </Link>
             </Button>
           </div>

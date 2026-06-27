@@ -5,8 +5,8 @@
     "caseStudies": "Case Studies",
     "team": "Team",
     "contact": "Contact",
-    "freeSeoAudit": "Free SEO Audit",
-    "getFreeSeoAudit": "Get Free SEO Audit",
+    "freeSeoAudit": "Free SEO & GEO Audit",
+    "getFreeSeoAudit": "Get Free SEO & GEO Audit",
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode",
     "openMenu": "Open navigation menu",
@@ -14,20 +14,20 @@
     "home": "GrowthPilot Agency - Home"
   },
   "hero": {
-    "metaDescription": "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation. Get more leads, customers & sales.",
+    "metaDescription": "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation. Get more leads, customers & sales.",
     "previous": "Previous slide",
     "next": "Next slide",
     "slide": "Slide",
     "noCommitment": "No commitment",
     "freeStrategyReport": "Free strategy report",
-    "turnaround": "24hr turnaround",
+    "turnaround": "1-2hr turnaround",
     "slides": [
       {
-        "badge": "SEO Services",
-        "headline1": "Dominate Search Rankings",
-        "headline2": "Drive Organic Traffic",
-        "headline3": "& Qualified Leads",
-        "description": "Data-driven SEO strategies that put your business on page one and keep qualified leads coming.",
+        "badge": "SEO & GEO Services",
+        "headline1": "Dominate Search & AI Rankings",
+        "headline2": "Drive Traffic from Google",
+        "headline3": "& Generative AI Engines",
+        "description": "Data-driven SEO & GEO strategies that put your business on page one and keep qualified leads coming.",
         "cta": "Boost Rankings",
         "cta2": "Learn More"
       },
@@ -73,26 +73,29 @@
     "badge": "What We Do",
     "title": "Everything You Need to",
     "highlight": "Grow Online",
-    "description": "From SEO to AI automation, we provide end-to-end digital growth solutions tailored to your business.",
+    "description": "From SEO & GEO to AI automation, we provide end-to-end digital growth solutions tailored to your business.",
     "list": [
       {
-        "title": "SEO Services",
+        "title": "SEO & GEO Services",
         "slug": "seo-services",
-        "description": "Dominate search rankings with data-driven SEO strategies that drive organic traffic and qualified leads.",
-        "benefits": ["Keyword research & strategy", "On-page & technical SEO", "Link building & authority", "Content strategy"],
+        "description": "Dominate search and AI-generated rankings with data-driven strategies that drive organic traffic and qualified leads.",
+        "benefits": ["Keyword research & strategy", "On-page & technical SEO", "GEO (Generative Engine Optimization)", "Content strategy"],
         "cta": "Boost Rankings",
-        "detailedDescription": "Our SEO services are built on data, not guesswork. We conduct in-depth keyword research, technical site audits, and competitive analysis to create a custom strategy that puts your business on page one of Google. From on-page optimization to authoritative link building, every tactic is designed to drive measurable organic growth.",
+        "image": "/seo-services.avif",
+        "detailedDescription": "Our SEO & GEO services are built on data, not guesswork. We optimize your business for both traditional search engines (Google, Bing) and generative AI engines (ChatGPT, Gemini, Perplexity). From in-depth keyword research and technical site audits to structured data and AI-friendly content, every tactic is designed to drive measurable organic growth across all discovery channels.",
         "process": [
-          { "step": "Discovery & Audit", "description": "We analyze your website, competitors, and target market to identify opportunities and gaps." },
-          { "step": "Strategy Development", "description": "A custom SEO roadmap built around high-value keywords, technical fixes, and content opportunities." },
-          { "step": "On-Page Optimization", "description": "Meta tags, content optimization, internal linking, and schema markup implementation." },
+          { "step": "Discovery & Audit", "description": "We analyze your website, competitors, and target market to identify opportunities across search and AI engines." },
+          { "step": "Strategy Development", "description": "A custom SEO & GEO roadmap built around high-value keywords, technical fixes, and AI-aligned content opportunities." },
+          { "step": "On-Page & AI Optimization", "description": "Meta tags, structured data, content optimization, and schema markup for both search engines and AI crawlers." },
           { "step": "Technical SEO", "description": "Site speed, mobile usability, crawl optimization, and Core Web Vitals improvements." },
+          { "step": "GEO Implementation", "description": "Authoritative content, Q&A optimization, citation building, and entity-based SEO for generative engine visibility." },
           { "step": "Link Building & Authority", "description": "Earn high-quality backlinks through digital PR, guest posting, and content marketing." },
-          { "step": "Monitoring & Reporting", "description": "Transparent monthly reports with keyword rankings, traffic data, and actionable insights." }
+          { "step": "Monitoring & Reporting", "description": "Transparent monthly reports with keyword rankings, AI mention tracking, traffic data, and actionable insights." }
         ],
         "faq": [
-          { "q": "How long does SEO take to show results?", "a": "Most clients see significant improvements within 3-6 months. However, initial wins like technical fixes and local SEO optimizations can show impact within 4-6 weeks." },
-          { "q": "Do you guarantee page 1 rankings?", "a": "No reputable agency can guarantee #1 rankings, as Google's algorithm is complex and ever-changing. We guarantee data-driven strategies, transparent reporting, and continuous optimization to maximize your ranking potential." },
+          { "q": "How long does SEO & GEO take to show results?", "a": "Most clients see significant improvements within 3-6 months. However, initial wins like technical fixes, local SEO optimizations, and GEO quick-wins can show impact within 4-6 weeks." },
+          { "q": "Do you guarantee page 1 rankings?", "a": "No reputable agency can guarantee #1 rankings, as Google's algorithm is complex and ever-changing. We guarantee data-driven strategies, transparent reporting, and continuous optimization to maximize your ranking potential across both search engines and AI platforms." },
+          { "q": "What is GEO (Generative Engine Optimization)?", "a": "GEO is the practice of optimizing your content to be cited by AI-powered search engines like ChatGPT, Google Gemini, and Perplexity. It involves structured data, authoritative citations, Q&A optimization, and entity-based SEO to ensure your brand appears in AI-generated answers." },
           { "q": "What industries do you specialize in?", "a": "We work across legal, insurance, healthcare, real estate, hospitality, education, and e-commerce. Our strategies are tailored to each industry's unique competitive landscape." }
         ]
       },
@@ -102,6 +105,7 @@
         "description": "High-converting, modern websites built with cutting-edge technology that captivates and converts.",
         "benefits": ["Custom Next.js development", "Responsive & mobile-first", "SEO-optimized structure", "Fast loading & accessible"],
         "cta": "Get Website",
+        "image": "/website-design.jpg",
         "detailedDescription": "Your website is your digital storefront. We build high-performance websites using Next.js and modern frameworks that load instantly, rank higher on Google, and convert visitors into customers. Every site we build is fully responsive, accessible, and optimized for the best user experience across all devices.",
         "process": [
           { "step": "Discovery & Planning", "description": "We learn about your brand, audience, and goals to create a detailed project roadmap." },
@@ -123,6 +127,7 @@
         "description": "Streamline your business with intelligent AI-powered automations that save time and boost efficiency.",
         "benefits": ["Workflow automation", "Chatbot development", "AI content generation", "Process optimization"],
         "cta": "Automate Now",
+        "image": "/ai-automation.jpg",
         "detailedDescription": "AI-powered automation is transforming how businesses operate. We design and implement intelligent systems that handle repetitive tasks, generate content, manage customer interactions, and optimize your workflows. From custom chatbots to automated reporting pipelines, we help you do more with less.",
         "process": [
           { "step": "Process Audit", "description": "We map your current workflows to identify high-impact automation opportunities." },
@@ -143,6 +148,7 @@
         "description": "Automate customer communication and lead nurturing directly through WhatsApp's massive reach.",
         "benefits": ["Auto-reply systems", "Broadcast campaigns", "Lead qualification", "CRM integration"],
         "cta": "Start Chat",
+        "image": "/whatsapp-automation.png",
         "detailedDescription": "WhatsApp is the most widely used messaging platform in West Africa. We help businesses automate their WhatsApp communication — from instant auto-replies and smart lead qualification to broadcast campaigns and full CRM integration. Never miss a lead again.",
         "process": [
           { "step": "Requirements Gathering", "description": "We analyze your communication needs, volume, and existing workflows." },
@@ -163,6 +169,7 @@
         "description": "Multi-channel lead generation campaigns that fill your pipeline with high-quality, ready-to-convert prospects.",
         "benefits": ["Targeted campaigns", "Landing page funnels", "Email outreach", "Conversion tracking"],
         "cta": "Get Leads",
+        "image": "/lead-generation.jpg",
         "detailedDescription": "Stop chasing leads — let them come to you. Our multi-channel lead generation strategies combine targeted ad campaigns, high-converting landing pages, email outreach, and automated follow-ups to fill your pipeline with qualified prospects who are ready to buy.",
         "process": [
           { "step": "Target Audience Analysis", "description": "Define your ideal customer profile and identify the best channels to reach them." },
@@ -180,10 +187,10 @@
       {
         "title": "Local SEO",
         "slug": "local-seo",
-        "description": "Dominate local search results and Google Maps to bring more nearby customers to your business.",
+        "description": "Dominate local search and AI-generated local results to bring more nearby customers to your business.",
         "benefits": ["Google Business Profile", "Local citations", "Review management", "Local content strategy"],
         "cta": "Go Local",
-        "detailedDescription": "If you serve customers in a specific geographic area, Local SEO is your most powerful growth channel. We optimize your Google Business Profile, build local citations, manage reviews, and create location-specific content to ensure your business appears at the top of local search results and Google Maps.",
+        "detailedDescription": "If you serve customers in a specific geographic area, Local SEO is your most powerful growth channel. We optimize your Google Business Profile, build local citations, manage reviews, and create location-specific content to ensure your business appears at the top of local search results, Google Maps, and AI-generated local recommendations.",
         "process": [
           { "step": "Local Audit", "description": "Comprehensive review of your current local search presence and competitor landscape." },
           { "step": "Google Business Profile Optimization", "description": "Full optimization of your GBP with accurate info, categories, photos, and posts." },
@@ -192,7 +199,7 @@
           { "step": "Local Content & Monitoring", "description": "Location-specific content creation and ongoing rank tracking for local keywords." }
         ],
         "faq": [
-          { "q": "How long does Local SEO take?", "a": "Local SEO improvements can show results in 4-8 weeks, especially Google Business Profile optimizations and citation cleanup." },
+          { "q": "How long does Local SEO & GEO take?", "a": "Local SEO improvements can show results in 4-8 weeks, especially Google Business Profile optimizations and citation cleanup." },
           { "q": "Do you work with multi-location businesses?", "a": "Yes. We have strategies for businesses with multiple locations, including optimized pages for each location and local link building." },
           { "q": "What's included in Google Business Profile optimization?", "a": "Complete profile setup/optimization, category selection, service menu setup, photo/video uploads, posting strategy, and Q&A management." }
         ]
@@ -287,13 +294,13 @@
         "process": [
           { "step": "Brand Voice Definition", "description": "Establish your brand's tone, style, and messaging guidelines for consistent content." },
           { "step": "Content Strategy", "description": "Editorial calendar covering blog posts, social content, videos, and marketing collateral." },
-          { "step": "Copywriting & Blogging", "description": "SEO-optimized articles, website copy, email sequences, and ad copy." },
+          { "step": "Copywriting & Blogging", "description": "SEO & GEO-optimized articles, website copy, email sequences, and ad copy." },
           { "step": "Visual & Video Production", "description": "Professional graphic design and short-form video creation for social media and ads." },
           { "step": "Performance Review", "description": "Track engagement, traffic, and conversion metrics to refine content strategy." }
         ],
         "faq": [
           { "q": "How much content do you produce?", "a": "We typically produce 4-8 blog posts per month, 15-20 social media graphics, and 4-8 short-form videos — all tailored to your specific needs and budget." },
-          { "q": "Do you optimize content for SEO?", "a": "Yes. Every piece of written content is optimized with keyword research, proper headings, meta descriptions, and internal linking structure." },
+          { "q": "Do you optimize content for SEO & GEO?", "a": "Yes. Every piece of written content is optimized with keyword research, proper headings, meta descriptions, structured data, and internal linking structure for both search engines and AI platforms." },
           { "q": "Can you match our brand voice?", "a": "Absolutely. We start with a thorough brand voice analysis and create a style guide before producing any content. Your brand's unique voice is our top priority." }
         ]
       },
@@ -348,13 +355,13 @@
           { "step": "Reputation Audit", "description": "Complete assessment of your current online reputation across all platforms." },
           { "step": "Monitoring Setup", "description": "Implement tools and processes to track reviews, mentions, and sentiment in real-time." },
           { "step": "Review Management", "description": "Systematic approach to generating positive reviews and professionally responding to negative ones." },
-          { "step": "Content & SEO Strategy", "description": "Positive content creation and SEO to push down negative results and control your narrative." },
+          { "step": "Content & SEO & GEO Strategy", "description": "Positive content creation and SEO/GEO to push down negative results and control your narrative." },
           { "step": "Ongoing Reporting", "description": "Monthly reputation reports with review trends, sentiment analysis, and recommendations." }
         ],
         "faq": [
           { "q": "Can you remove negative reviews?", "a": "We cannot directly remove legitimate reviews, but we can help respond professionally, resolve issues, and generate enough positive reviews to minimize their impact." },
           { "q": "What platforms do you monitor?", "a": "Google, Facebook, Yelp, Trustpilot, TripAdvisor, and industry-specific platforms. We also monitor social media mentions and news articles." },
-          { "q": "How quickly do you respond to reviews?", "a": "Our team monitors reviews in real-time and responds to negative reviews within 24 hours, often within a few hours during business days." }
+          { "q": "How quickly do you respond to reviews?", "a": "Our team monitors reviews in real-time and responds to negative reviews within 1-2 hours, often within minutes during business days." }
         ]
       },
       {
@@ -423,7 +430,7 @@
   },
   "caseStudies": {
     "metaTitle": "Case Studies",
-    "metaDescription": "See how GrowthPilot Agency has transformed businesses with data-driven SEO, AI automation, and web design. Real results for real businesses.",
+    "metaDescription": "See how GrowthPilot Agency has transformed businesses with data-driven SEO & GEO, AI automation, and web design. Real results for real businesses.",
     "badge": "Case Studies",
     "title": "Real Results for",
     "highlight": "Real Businesses",
@@ -449,10 +456,10 @@
       {
         "title": "Law Firm Lead Generation Transformation",
         "slug": "law-firm-lead-generation",
-        "metaDescription": "How we transformed a law firm from 5 to 200+ organic leads per month through SEO, content strategy, and technical optimization.",
+        "metaDescription": "How we transformed a law firm from 5 to 200+ organic leads per month through SEO & GEO, content strategy, and technical optimization.",
         "industry": "Legal Services",
         "before": "Relied on referrals only, minimal online presence, 5 organic leads/month.",
-        "after": "Dominant search presence, 200+ organic leads/month, 40% from SEO.",
+        "after": "Dominant search presence, 200+ organic leads/month, 40% from SEO & GEO.",
         "metrics": { "Traffic Increase": "380%", "Rankings Improved": "45 keywords in top 3", "Lead Conversion": "12.5%" }
       },
       {
@@ -476,16 +483,16 @@
     ]
   },
   "seoAudit": {
-    "badge": "Free SEO Audit",
+    "badge": "Free SEO & GEO Audit",
     "title": "Get Your Free",
-    "highlight": "SEO Audit Report",
-    "description": "Find out exactly what's holding your website back from ranking on Google. We'll analyze your site and send you a detailed report with actionable recommendations.",
+    "highlight": "SEO & GEO Audit Report",
+    "description": "Find out exactly what's holding your website back from ranking on Google and generative AI engines. We'll analyze your site and send you a detailed report with actionable recommendations.",
     "benefits": [
       "Complete website technical analysis",
       "Competitor benchmarking",
       "Keyword opportunity assessment",
       "Custom growth roadmap",
-      "No commitment, 24hr delivery"
+      "No commitment, 1-2hr delivery"
     ],
     "form": {
       "fullName": "Full Name",
@@ -498,12 +505,12 @@
       "companyPlaceholder": "Your Business Ltd",
       "website": "Website URL",
       "websitePlaceholder": "https://yourwebsite.com",
-      "submit": "Get My Free SEO Audit",
+      "submit": "Get My Free SEO & GEO Audit",
       "processing": "Processing...",
       "privacy": "No spam. Unsubscribe anytime. Your data is safe with us."
     },
     "successTitle": "You're All Set!",
-    "successMessage": "Thank you! Check your email for your free SEO audit."
+    "successMessage": "Thank you! Check your email for your free SEO & GEO audit."
   },
   "testimonials": {
     "badge": "Testimonials",
@@ -518,15 +525,15 @@
     ]
   },
   "about": {
-    "badge": "About Me",
-    "name": "Agyiri Sakyi",
-    "title": "Web Developer, SEO Specialist & AI Automation Consultant",
-    "description": "With over 7 years of experience, I've helped 50+ businesses across multiple industries transform their digital presence and achieve measurable growth. My approach combines technical expertise with AI-powered strategies to deliver results that matter.",
+    "badge": "About the Company",
+    "name": "GrowthPilot Agency",
+    "title": "SEO & GEO, Web Development & AI Automation Agency",
+    "description": "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation. With 7+ years of experience and 50+ successful projects, our team combines technical expertise with AI-powered strategies to deliver measurable growth for our clients.",
     "years": "7+ yrs",
-    "skills": ["SEO", "Next.js", "React", "WordPress", "Cloud Tech", "AI Automation", "Lead Generation"]
+    "skills": ["SEO & GEO", "Web Development", "AI Automation", "Lead Generation", "Cloud Solutions", "Digital Strategy", "WhatsApp Marketing"]
   },
   "team": {
-    "metaTitle": "Our Team | GrowthPilot Agency",
+    "metaTitle": "Our Team",
     "metaDescription": "Meet the experts behind GrowthPilot Agency — a team of strategists, developers, and creative minds dedicated to your growth.",
     "pageTitle": "Our Team",
     "pageDescription": "Meet the experts behind GrowthPilot Agency — a team of strategists, developers, and creative minds dedicated to your growth.",
@@ -537,9 +544,9 @@
     "members": [
       {
         "name": "Agyiri Sakyi",
-        "role": "Founder & CEO",
-        "bio": "Visionary leader with 7+ years of experience in digital marketing, SEO, and AI automation. Agyiri founded GrowthPilot Agency to help businesses leverage technology for measurable growth.",
-        "skills": ["Strategy", "SEO", "AI Automation", "Leadership"]
+        "role": "Software Engineer",
+        "bio": "Experienced software engineer specializing in building high-performance web applications, SEO & GEO-optimized architectures, and AI-powered automation systems. Agyiri combines deep technical expertise with a passion for crafting scalable digital solutions.",
+        "skills": ["Full-Stack Development", "Next.js", "AI/ML Integration", "System Architecture"]
       },
       {
         "name": "Vannil",
@@ -556,7 +563,7 @@
     ]
   },
   "footer": {
-    "description": "We help businesses grow faster with SEO, high-converting websites, AI automation, and WhatsApp lead generation.",
+    "description": "We help businesses grow faster with SEO & GEO, high-converting websites, AI automation, and WhatsApp lead generation.",
     "services": "Services",
     "company": "Company",
     "industries": "Industries",
@@ -566,7 +573,7 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "serviceLinks": {
-      "seo": "SEO Services",
+      "seo": "SEO & GEO Services",
       "website": "Website Design",
       "ai": "AI Automation",
       "whatsapp": "WhatsApp Automation",
@@ -607,7 +614,7 @@
     "phone": "Phone",
     "location": "Location",
     "responseTime": "Response Time",
-    "responseTimeValue": "Within 24 hours",
+    "responseTimeValue": "Within 1-2 hours",
     "successTitle": "Message Sent!",
     "successMessage": "Message sent successfully!",
     "sendAnother": "Send Another Message",
@@ -640,7 +647,7 @@
         "heading": "2. Information We Collect",
         "content": "We may collect the following types of information:",
         "items": [
-          "Personal Data: name, email address, phone number, company name, and website URL when you submit our contact or SEO audit forms.",
+          "Personal Data: name, email address, phone number, company name, and website URL when you submit our contact or SEO & GEO audit forms.",
           "Usage Data: pages visited, time spent, browser type, and device information collected via cookies and analytics tools.",
           "Communication Data: any information you provide when you contact us via email, WhatsApp, or other channels."
         ]
@@ -691,7 +698,7 @@
     "lastUpdated": "Last updated: June 24, 2026",
     "sections": [
       { "heading": "1. Acceptance of Terms", "content": "By accessing or using the GrowthPilot Agency website and services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services." },
-      { "heading": "2. Services Description", "content": "GrowthPilot Agency provides digital marketing services including but not limited to SEO, website design, AI automation, WhatsApp automation, and lead generation. The scope, deliverables, and timeline of each project will be outlined in a separate service agreement." },
+      { "heading": "2. Services Description", "content": "GrowthPilot Agency provides digital marketing services including but not limited to SEO & GEO, website design, AI automation, WhatsApp automation, and lead generation. The scope, deliverables, and timeline of each project will be outlined in a separate service agreement." },
       { "heading": "3. User Responsibilities", "content": "As a user of our services, you agree to:", "items": ["Provide accurate and complete information when using our forms or services", "Use our services only for lawful purposes and in compliance with applicable laws", "Not engage in any activity that could harm, disrupt, or impair our website or services", "Not attempt to gain unauthorized access to any part of our systems"] },
       { "heading": "4. Intellectual Property", "content": "All content, materials, designs, and code provided by GrowthPilot Agency are the intellectual property of GrowthPilot Agency unless otherwise stated. You may not reproduce, distribute, or create derivative works without our prior written consent." },
       { "heading": "5. Payment Terms", "content": "Payment terms for services will be specified in individual service agreements. Failure to make timely payments may result in suspension or termination of services. All fees are non-refundable unless otherwise stated in writing." },
@@ -704,7 +711,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Insights, tips, and strategies on SEO, AI automation, web design, and digital marketing from the GrowthPilot Agency team.",
+    "metaDescription": "Insights, tips, and strategies on SEO & GEO, AI automation, web design, and digital marketing from the GrowthPilot Agency team.",
     "badge": "Our Blog",
     "title": "Latest",
     "highlight": "Insights",
@@ -724,14 +731,14 @@
   },
   "exitIntent": {
     "badge": "Free Download",
-    "title": "Get Your Free SEO Audit Checklist",
+    "title": "Get Your Free SEO & GEO Audit Checklist",
     "description": "27-point checklist used by our team to rank 50+ businesses on page 1 of Google. Enter your email and we'll send it instantly.",
     "benefits": [
       "Complete website technical analysis",
       "Competitor benchmarking",
       "Keyword opportunity assessment",
       "Custom growth roadmap",
-      "No commitment, 24hr delivery"
+      "No commitment, 1-2hr delivery"
     ],
     "placeholder": "your@email.com",
     "cta": "Send My Free Checklist",

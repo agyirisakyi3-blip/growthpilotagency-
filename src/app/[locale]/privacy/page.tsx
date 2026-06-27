@@ -9,11 +9,22 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    alternates: { canonical: `/${locale}/privacy` },
+    alternates: {
+      canonical: `/${locale}/privacy`,
+      languages: {
+        en: "/en/privacy",
+        fr: "/fr/privacy",
+      },
+    },
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
       url: `https://growthpilotagency.com/${locale}/privacy`,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "GrowthPilot Agency" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/og.png"],
     },
   };
 }

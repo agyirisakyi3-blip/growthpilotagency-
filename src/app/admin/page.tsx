@@ -5,12 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Users, Trash2, Download, RefreshCw, Search, Eye,
   Mail, LogOut, Lock, TrendingUp, Inbox, Send, AlertTriangle,
-  X, Menu, LayoutDashboard, Calendar, ChevronRight, Bell,
+  X, Menu, LayoutDashboard, Calendar, ChevronRight, Bell, MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import { getLeads, deleteLead } from "@/app/actions/leads";
 import { getContacts, deleteContact } from "@/app/actions/contact";
 import { getSubscribers, deleteSubscriber, getEmailLogs, deleteEmailLog } from "@/app/actions/admin";
@@ -344,6 +345,15 @@ export default function AdminPage() {
             </button>
           );
         })}
+        <div className="pt-2 mt-2 border-t border-border">
+          <Link
+            href="/admin/whatsapp"
+            className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-[#25D366]/10 hover:text-[#25D366] transition-all"
+          >
+            <MessageSquare size={16} />
+            <span>WhatsApp Chat</span>
+          </Link>
+        </div>
       </div>
       <div className="p-3 border-t border-border">
         <button

@@ -18,11 +18,22 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "hero" });
   return {
-    title: "GrowthPilot Agency | SEO, Websites & AI Automation Agency",
+    title: "GrowthPilot Agency | SEO & GEO, Websites & AI Automation Agency",
     description: t("metaDescription"),
-    alternates: { canonical: `/${locale}` },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        fr: "/fr",
+      },
+    },
     openGraph: {
       url: `https://growthpilotagency.com/${locale}`,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "GrowthPilot Agency" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/og.png"],
     },
   };
 }

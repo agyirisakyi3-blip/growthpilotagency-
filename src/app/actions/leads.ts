@@ -47,15 +47,15 @@ export async function submitLead(formData: FormData) {
       email,
       company,
       phone: phone || undefined,
-      message: message || "SEO audit requested via website form",
+      message: message || "SEO & GEO audit requested via website form",
     }));
 
-    await sendEmail({ to: adminEmail, subject: `New SEO Audit Lead: ${name} - ${company}`, html });
+    await sendEmail({ to: adminEmail, subject: `New SEO & GEO Audit Lead: ${name} - ${company}`, html });
 
     return {
       success: true,
       message:
-        "Thank you! We'll review your website and send your free SEO audit report within 24 hours.",
+        "Thank you! We'll review your website and send your free SEO & GEO audit report within 1-2 hours.",
     };
   } catch (error) {
     console.error("Failed to submit lead:", error);

@@ -72,6 +72,52 @@ model PasswordResetToken {
   @@index([email])
 }
 
+model WhatsAppContact {
+  id            String               @id @default(cuid())
+  waId          String               @unique
+  name          String               @default("")
+  email         String               @default("")
+  company       String               @default("")
+  phone         String               @default("")
+  status        String               @default("new")
+  serviceInterest String             @default("")
+  notes         String               @default("")
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
+  conversations WhatsAppConversation[]
+
+  @@index([waId])
+  @@index([status])
+}
+
+model WhatsAppConversation {
+  id         String           @id @default(cuid())
+  contactId  String
+  contact    WhatsAppContact  @relation(fields: [contactId], references: [id])
+  status     String           @default("active")
+  intent     String           @default("unknown")
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+  messages   WhatsAppMessage[]
+
+  @@index([contactId])
+  @@index([status])
+}
+
+model WhatsAppMessage {
+  id             String               @id @default(cuid())
+  conversationId String
+  conversation   WhatsAppConversation @relation(fields: [conversationId], references: [id])
+  fromMe         Boolean              @default(false)
+  content        String
+  type           String               @default("text")
+  metadata       String               @default("{}")
+  createdAt      DateTime             @default(now())
+
+  @@index([conversationId])
+  @@index([createdAt])
+}
+
 model BlogPost {
   id        String   @id @default(cuid())
   title     String

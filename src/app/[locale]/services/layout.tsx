@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "Services",
     description:
-      "Explore our full range of digital growth services — SEO, website design, AI automation, WhatsApp automation, lead generation, and more.",
+      "Explore our full range of digital growth services — SEO & GEO, website design, AI automation, WhatsApp automation, lead generation, and more.",
     alternates: {
       canonical: url,
       languages: {
@@ -20,14 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: "Services | GrowthPilot Agency",
-      description: "Digital growth services including SEO, web design, AI automation, and lead generation.",
+      description: "Digital growth services including SEO & GEO, web design, AI automation, and lead generation.",
       url: `${baseUrl}${url}`,
       images: [{ url: "/og.png", width: 1200, height: 630, alt: "GrowthPilot Agency Services" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Services | GrowthPilot Agency",
-      description: "Digital growth services including SEO, web design, AI automation, and lead generation.",
+      description: "Digital growth services including SEO & GEO, web design, AI automation, and lead generation.",
       images: ["/og.png"],
     },
   };
