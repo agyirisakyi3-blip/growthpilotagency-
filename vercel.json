@@ -1,5 +1,5 @@
 {
-  "buildCommand": "DATABASE_URL=\"file:./prisma/dev.db\" npx prisma generate && DATABASE_URL=\"file:./prisma/dev.db\" npx next build",
+  "buildCommand": "npx prisma generate && next build",
   "installCommand": "npm install",
   "framework": "nextjs"
 }
