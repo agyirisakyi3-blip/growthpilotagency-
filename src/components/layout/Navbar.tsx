@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X, Moon, Sun, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
@@ -20,6 +20,11 @@ export function Navbar() {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations("nav");
 
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 50);
+  });
+
   const navLinks = [
     { label: t("services"), href: "/services" },
     { label: t("results"), href: "/#results" },
@@ -30,13 +35,6 @@ export function Navbar() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMobileOpen(false);
   }, [pathname]);
 
@@ -68,23 +66,20 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-[#0f2d5a]/90 backdrop-blur-xl border-b border-white/10 shadow-sm"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-xs"
           : "bg-transparent"
       )}
       role="banner"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[72px]">
         <Link
           href="/"
-          className={cn(
-            "flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded-lg",
-            scrolled && "text-white"
-          )}
+          className="flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded-lg"
           aria-label={t("home")}
         >
           <Logo />
           <span className="font-semibold text-lg tracking-tight">
-            GrowthPilot<span className={cn(scrolled ? "text-white/70" : "text-primary")}>Agency</span>
+            GrowthPilot<span className="text-primary">Agency</span>
           </span>
         </Link>
 
@@ -97,10 +92,10 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "px-4 py-2.5 text-sm transition-colors rounded-lg focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2",
+                "px-4 py-2.5 text-sm transition-colors rounded-lg",
                 scrolled
-                  ? "text-white/70 hover:text-white hover:bg-white/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                  ? "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-background/50"
               )}
             >
               {link.label}
@@ -114,8 +109,8 @@ export function Navbar() {
             className={cn(
               "p-2.5 rounded-lg transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center",
               scrolled
-                ? "text-white/70 hover:text-white hover:bg-white/10"
-                : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                ? "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                : "text-muted-foreground hover:text-foreground hover:bg-background/50"
             )}
             aria-label={theme === "dark" ? t("switchToLight") : t("switchToDark")}
           >
@@ -123,7 +118,7 @@ export function Navbar() {
           </button>
 
           <Button
-            variant="gradient"
+            variant="accent"
             size="default"
             className="hidden sm:inline-flex gap-2"
             asChild
@@ -140,8 +135,8 @@ export function Navbar() {
             className={cn(
               "md:hidden p-2.5 rounded-lg transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center",
               scrolled
-                ? "text-white/70 hover:text-white hover:bg-white/10"
-                : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                ? "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                : "text-muted-foreground hover:text-foreground hover:bg-background/50"
             )}
             aria-label={t("openMenu")}
             aria-expanded={mobileOpen}
@@ -179,7 +174,7 @@ export function Navbar() {
               </Link>
               <button
                 onClick={closeMenu}
-                className="p-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-label={t("closeMenu")}
                 autoFocus
               >
@@ -192,14 +187,14 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className="px-4 py-3.5 text-lg text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-lg transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+                  className="px-4 py-3.5 text-lg text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
                 >
                   {link.label}
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t border-border">
                 <Button
-                  variant="gradient"
+                  variant="accent"
                   size="lg"
                   className="w-full gap-2 min-h-[48px]"
                   asChild

@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
 import { ServiceBanner } from "@/components/home/ServiceBanner";
-import { SectionWave } from "@/components/features/section-divider";
 
 const Results = dynamic(() => import("@/components/home/Results").then((m) => ({ default: m.Results })));
 const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs").then((m) => ({ default: m.WhyChooseUs })));
@@ -34,15 +33,11 @@ export default function Home() {
       <Hero />
       <Services />
       <ServiceBanner />
-      <SectionWave flip />
       <Results />
-      <SectionWave />
       <WhyChooseUs />
       <Industries />
-      <SectionWave flip />
       <CaseStudies />
       <SeoAudit />
-      <SectionWave />
       <Testimonials />
       <About />
     </>
