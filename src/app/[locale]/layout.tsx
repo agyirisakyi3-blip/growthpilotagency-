@@ -16,6 +16,7 @@ import { Toaster } from "sonner";
 import { ExitIntentPopup } from "@/components/features/ExitIntentPopup";
 import { SocialProof } from "@/components/features/SocialProof";
 import { LanguageSwitcher } from "@/components/features/LanguageSwitcher";
+import { GeoBanner } from "@/components/features/GeoBanner";
 import "@/app/globals.css";
 
 const ScrollProgress = dynamic(
@@ -125,6 +126,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <ScrollProgress />
         <MouseGradient />
         <Navbar />
+        <GeoBanner />
         <LanguageSwitcher />
         <WhatsAppButton />
         <main id="main-content" className="flex-1" role="main">
