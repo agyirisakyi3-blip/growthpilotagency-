@@ -20,19 +20,19 @@ export function Navbar() {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations("nav");
 
+  const isHome = pathname === "/en" || pathname === "/fr" || pathname === "/";
+
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 50);
+    setScrolled(latest > 80);
   });
 
   const navLinks = [
     { label: t("services"), href: "/services" },
     { label: t("pricing"), href: "/pricing" },
-    { label: t("results"), href: "/#results" },
     { label: t("caseStudies"), href: "/case-studies" },
     { label: t("team"), href: "/team" },
     { label: "Blog", href: "/blog" },
-    { label: t("contact"), href: "/contact" },
   ];
 
   useEffect(() => {
@@ -62,13 +62,17 @@ export function Navbar() {
     setMobileOpen(false);
   }, []);
 
+  const darkMode = isHome && !scrolled;
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-xs"
-          : "bg-transparent"
+          : darkMode
+            ? "bg-transparent"
+            : "bg-background/80 backdrop-blur-xl border-b border-border shadow-xs"
       )}
       role="banner"
     >
@@ -79,8 +83,8 @@ export function Navbar() {
           aria-label={t("home")}
         >
           <Logo />
-          <span className="font-semibold text-lg tracking-tight">
-            GrowthPilot<span className="text-primary">Agency</span>
+          <span className={cn("font-semibold text-lg tracking-tight", darkMode ? "text-white" : "")}>
+            GrowthPilot<span className={cn(darkMode ? "text-[#f5a623]" : "text-primary")}>Agency</span>
           </span>
         </Link>
 
@@ -94,9 +98,9 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "px-4 py-2.5 text-sm transition-colors rounded-lg",
-                scrolled
-                  ? "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+                darkMode
+                  ? "text-white/70 hover:text-white hover:bg-white/[0.06]"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               )}
             >
               {link.label}
@@ -109,9 +113,9 @@ export function Navbar() {
             onClick={toggleTheme}
             className={cn(
               "p-2.5 rounded-lg transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center",
-              scrolled
-                ? "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+              darkMode
+                ? "text-white/70 hover:text-white hover:bg-white/[0.06]"
+                : "text-muted-foreground hover:text-foreground hover:bg-secondary"
             )}
             aria-label={theme === "dark" ? t("switchToLight") : t("switchToDark")}
           >
@@ -121,11 +125,14 @@ export function Navbar() {
           <Button
             variant="accent"
             size="default"
-            className="hidden sm:inline-flex gap-2"
+            className={cn(
+              "hidden sm:inline-flex gap-2",
+              darkMode ? "bg-[#f5a623] text-[#0b1628] hover:bg-[#e0981f]" : ""
+            )}
             asChild
           >
-            <Link href="/#seo-audit">
-              {t("freeSeoAudit")}
+            <Link href="/contact">
+              {t("contact")}
               <ArrowRight size={14} />
             </Link>
           </Button>
@@ -135,9 +142,9 @@ export function Navbar() {
             onClick={() => setMobileOpen(true)}
             className={cn(
               "md:hidden p-2.5 rounded-lg transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center",
-              scrolled
-                ? "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+              darkMode
+                ? "text-white/70 hover:text-white hover:bg-white/[0.06]"
+                : "text-muted-foreground hover:text-foreground hover:bg-secondary"
             )}
             aria-label={t("openMenu")}
             aria-expanded={mobileOpen}
@@ -200,8 +207,8 @@ export function Navbar() {
                   className="w-full gap-2 min-h-[48px]"
                   asChild
                 >
-                  <Link href="/#seo-audit" onClick={closeMenu}>
-                    {t("getFreeSeoAudit")}
+                  <Link href="/contact" onClick={closeMenu}>
+                    {t("contact")}
                     <ArrowRight size={16} />
                   </Link>
                 </Button>

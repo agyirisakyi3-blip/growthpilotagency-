@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import dynamic from "next/dynamic";
 import { Hero } from "@/components/home/Hero";
 import { Services } from "@/components/home/Services";
+import { TechStack } from "@/components/home/TechStack";
 import { ServiceBanner } from "@/components/home/ServiceBanner";
 
 const Results = dynamic(() => import("@/components/home/Results").then((m) => ({ default: m.Results })));
@@ -42,6 +43,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TechStack />
       <Services />
       <ServiceBanner />
       <Results />

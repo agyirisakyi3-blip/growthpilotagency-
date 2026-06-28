@@ -27,38 +27,38 @@
 }
 
 :root {
-  --background: #f7f8fa;
-  --foreground: #171b22;
-  --primary: #0d7377;
-  --primary-foreground: #ffffff;
-  --secondary: #eef1f4;
-  --secondary-foreground: #171b22;
-  --muted: #f1f3f5;
+  --background: #ffffff;
+  --foreground: #0f1724;
+  --primary: #f5a623;
+  --primary-foreground: #0f1724;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #0f1724;
+  --muted: #f9fafb;
   --muted-foreground: #6b7280;
-  --accent: #d97706;
-  --accent-foreground: #ffffff;
+  --accent: #f5a623;
+  --accent-foreground: #0f1724;
   --card: #ffffff;
-  --card-foreground: #171b22;
-  --border: #e2e5e9;
-  --ring: #0d7377;
+  --card-foreground: #0f1724;
+  --border: #e5e7eb;
+  --ring: #f5a623;
   --destructive: #dc2626;
 }
 
 .dark {
-  --background: #0f1117;
+  --background: #0b1628;
   --foreground: #f2f3f5;
-  --primary: #14a3a8;
-  --primary-foreground: #0f1117;
-  --secondary: #1e2028;
+  --primary: #f5a623;
+  --primary-foreground: #0b1628;
+  --secondary: #132339;
   --secondary-foreground: #f2f3f5;
-  --muted: #1a1c23;
+  --muted: #0f1f36;
   --muted-foreground: #8b8f96;
-  --accent: #f59e0b;
-  --accent-foreground: #0f1117;
-  --card: #16181f;
+  --accent: #f5a623;
+  --accent-foreground: #0b1628;
+  --card: #132339;
   --card-foreground: #f2f3f5;
-  --border: #262830;
-  --ring: #14a3a8;
+  --border: #1e3048;
+  --ring: #f5a623;
   --destructive: #7f1d1d;
 }
 
@@ -159,13 +159,20 @@
 
   .section-grid {
     background-image:
-      linear-gradient(rgba(13, 115, 119, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(13, 115, 119, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(245, 166, 35, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 166, 35, 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
   .gradient-text {
-    background: linear-gradient(135deg, var(--primary), #14a3a8);
+    background: linear-gradient(135deg, var(--primary), #f7c948);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
