@@ -96,3 +96,49 @@ export async function toggleCaseStudy(id: string, published: boolean) {
     return { success: false as const };
   }
 }
+
+export async function getPublishedCaseStudy(slug: string) {
+  try {
+    const study = await prisma.caseStudy.findFirst({
+      where: { slug, published: true },
+      select: { challenge: true, solution: true, results: true, client: true },
+    });
+    return study;
+  } catch {
+    return null;
+  }
+}
+
+export async function gateCaseStudy(formData: FormData) {
+  const email = formData.get("email") as string;
+  const slug = formData.get("slug") as string;
+
+  if (!email || !email.includes("@")) {
+    return { success: false as const, message: "Please enter a valid email address." };
+  }
+
+  try {
+    await prisma.subscriber.upsert({
+      where: { email },
+      update: {},
+      create: {
+        email,
+        source: `case-study-${slug}`,
+      },
+    });
+
+    const study = await prisma.caseStudy.findFirst({
+      where: { slug, published: true },
+      select: { challenge: true, solution: true, results: true, client: true },
+    });
+
+    if (!study) {
+      return { success: false as const, message: "Case study not found." };
+    }
+
+    return { success: true as const, data: study };
+  } catch (error) {
+    console.error("Failed to gate case study:", error);
+    return { success: false as const, message: "Something went wrong. Please try again." };
+  }
+}

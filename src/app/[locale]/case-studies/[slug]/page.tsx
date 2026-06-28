@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { getPublishedCaseStudy } from "@/app/actions/case-studies";
 import { CaseStudyDetailContent } from "./CaseStudyDetailContent";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -53,5 +54,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
   const study = list.find((s) => s.slug === slug);
   if (!study) notFound();
 
-  return <CaseStudyDetailContent study={study} />;
+  const gated = await getPublishedCaseStudy(slug);
+
+  return <CaseStudyDetailContent study={study} gated={gated} locale={locale} />;
 }
