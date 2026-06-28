@@ -2,7 +2,12 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "@/i18n/routing";
 
-const FRENCH_COUNTRIES = new Set(["FR", "BE", "CH", "LU", "MC", "CD", "CI", "CM", "SN", "ML", "MA", "TN", "DZ", "HT", "LU"]);
+const FRENCH_COUNTRIES = new Set([
+  "FR", "BE", "CH", "MC", "LU",
+  "CD", "CI", "CM", "SN", "ML", "MA", "TN", "DZ", "HT",
+  "BF", "BJ", "BI", "CF", "CG", "DJ", "GA", "GN", "GQ",
+  "KM", "MG", "MR", "MU", "NE", "RW", "SC", "TD", "TG",
+]);
 
 function detectLocale(geo: { country?: string }): string {
   if (geo.country && FRENCH_COUNTRIES.has(geo.country)) return "fr";
