@@ -26,7 +26,8 @@ export async function verifySession(): Promise<boolean> {
     const secret = process.env.ADMIN_PASSWORD || "";
     const expected = crypto.createHmac("sha256", secret).update(payload).digest("hex");
 
-    if (signature !== expected) return false;
+    if (signature.length !== expected.length) return false;
+    if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) return false;
 
     const { exp } = JSON.parse(payload);
     if (Date.now() > exp) return false;

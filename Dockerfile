@@ -1,4 +1,5 @@
 FROM node:20-alpine AS base
+RUN apk upgrade --no-cache
 
 FROM base AS deps
 RUN apk add --no-cache libc6-compat openssl

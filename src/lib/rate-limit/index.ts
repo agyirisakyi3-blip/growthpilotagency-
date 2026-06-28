@@ -1,4 +1,13 @@
+import { headers } from "next/headers";
+
 const rateMap = new Map<string, { count: number; resetAt: number }>();
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, entry] of rateMap) {
+    if (now > entry.resetAt) rateMap.delete(key);
+  }
+}, 60_000);
 
 export function checkRateLimit(key: string, maxRequests = 5, windowMs = 60000): {
   allowed: boolean;
@@ -19,6 +28,18 @@ export function checkRateLimit(key: string, maxRequests = 5, windowMs = 60000): 
 
   entry.count++;
   return { allowed: true, remaining: maxRequests - entry.count, resetAt: entry.resetAt };
+}
+
+export async function checkServerActionRateLimit(maxRequests = 5, windowMs = 60000): Promise<{
+  allowed: boolean;
+  remaining: number;
+  resetAt: number;
+}> {
+  const headerStore = await headers();
+  const ip = headerStore.get("x-forwarded-for")?.split(",")[0]?.trim()
+    || headerStore.get("x-real-ip")
+    || "unknown";
+  return checkRateLimit(`server-action:${ip}`, maxRequests, windowMs);
 }
 
 export function sanitize(input: string): string {

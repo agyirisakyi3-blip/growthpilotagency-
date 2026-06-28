@@ -7,6 +7,7 @@ import { sendEmail } from "@/lib/email";
 import { NewLeadNotificationEmail } from "@/emails";
 import { verifySession } from "@/lib/admin-auth";
 import { leadSchema } from "@/lib/validations/email";
+import { checkServerActionRateLimit, sanitize } from "@/lib/rate-limit";
 
 
 export async function submitLead(formData: FormData) {
@@ -19,22 +20,35 @@ export async function submitLead(formData: FormData) {
     message: formData.get("message") as string,
   };
 
+  const { allowed } = await checkServerActionRateLimit(3, 60_000);
+  if (!allowed) {
+    return { success: false, message: "Too many requests. Please try again later." };
+  }
+
   const parsed = leadSchema.safeParse(raw);
   if (!parsed.success) {
     return { success: false, message: parsed.error.issues[0].message };
   }
 
   const { name, email, phone, company, website, message } = parsed.data;
+  const clean = {
+    name: sanitize(name),
+    email: sanitize(email),
+    phone: sanitize(phone || ""),
+    company: sanitize(company),
+    website: sanitize(website || ""),
+    message: sanitize(message || ""),
+  };
 
   try {
     await prisma.lead.create({
       data: {
-        name,
-        email,
-        phone,
-        company,
-        website,
-        message: message || "",
+        name: clean.name,
+        email: clean.email,
+        phone: clean.phone,
+        company: clean.company,
+        website: clean.website,
+        message: clean.message,
         status: "new",
         source: "seo-audit",
       },
@@ -43,11 +57,11 @@ export async function submitLead(formData: FormData) {
     const adminEmail = process.env.ADMIN_EMAIL || process.env.EMAIL_TO || "agyirisakyi3@gmail.com";
 
     const html = await render(createElement(NewLeadNotificationEmail, {
-      name,
-      email,
-      company,
-      phone: phone || undefined,
-      message: message || "SEO & GEO audit requested via website form",
+      name: clean.name,
+      email: clean.email,
+      company: clean.company,
+      phone: clean.phone || undefined,
+      message: clean.message || "SEO & GEO audit requested via website form",
     }));
 
     await sendEmail({ to: adminEmail, subject: `New SEO & GEO Audit Lead: ${name} - ${company}`, html });

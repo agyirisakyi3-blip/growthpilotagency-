@@ -7,6 +7,7 @@ import { sendEmail } from "@/lib/email";
 import { ContactConfirmationEmail, NewLeadNotificationEmail } from "@/emails";
 import { verifySession } from "@/lib/admin-auth";
 import { contactFormSchema } from "@/lib/validations/email";
+import { checkServerActionRateLimit, sanitize } from "@/lib/rate-limit";
 
 export async function submitContact(formData: FormData) {
   const raw = {
@@ -17,28 +18,34 @@ export async function submitContact(formData: FormData) {
     message: formData.get("message") as string,
   };
 
+  const { allowed } = await checkServerActionRateLimit(3, 60_000);
+  if (!allowed) {
+    return { success: false, message: "Too many requests. Please try again later." };
+  }
+
   const parsed = contactFormSchema.safeParse(raw);
   if (!parsed.success) {
     return { success: false, message: parsed.error.issues[0].message };
   }
 
   const { name, email, phone, subject, message } = parsed.data;
+  const clean = { name: sanitize(name), email: sanitize(email), phone: sanitize(phone || ""), subject: sanitize(subject), message: sanitize(message) };
 
   try {
     await prisma.contact.create({
-      data: { name, email, phone, subject, message },
+      data: clean,
     });
 
     const adminEmail = process.env.ADMIN_EMAIL || process.env.EMAIL_TO || "agyirisakyi3@gmail.com";
 
     const [userHtml, adminHtml] = await Promise.all([
-      render(createElement(ContactConfirmationEmail, { name, message })),
+      render(createElement(ContactConfirmationEmail, { name: clean.name, message: clean.message })),
       render(createElement(NewLeadNotificationEmail, {
-        name,
-        email,
-        company: subject,
-        phone: phone || undefined,
-        message,
+        name: clean.name,
+        email: clean.email,
+        company: clean.subject,
+        phone: clean.phone || undefined,
+        message: clean.message,
       })),
     ]);
 
