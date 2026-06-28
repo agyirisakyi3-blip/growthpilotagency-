@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/lib/constants";
 import { prisma } from "@/lib/prisma";
+import { cities } from "@/data/cities";
 
 const baseUrl = "https://growthpilotagency.com";
 const locales = ["en", "fr"] as const;
@@ -70,6 +71,13 @@ const staticPages: MetadataRoute.Sitemap = [
     changeFrequency: "yearly",
     priority: 0.3,
   },
+  {
+    url: `${baseUrl}/audit`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+    alternates: alternateUrls("/audit"),
+  },
 ];
 
 const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
@@ -88,24 +96,46 @@ const caseStudyPages: MetadataRoute.Sitemap = caseStudySlugs.map((slug) => ({
   alternates: alternateUrls(`/case-studies/${slug}`),
 }));
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const blogPosts = await prisma.blogPost.findMany({
-    where: { published: true },
-    select: { slug: true, updatedAt: true },
-  });
+function geoPages(): MetadataRoute.Sitemap {
+  const pages: MetadataRoute.Sitemap = [];
+  for (const locale of locales) {
+    for (const city of cities.filter((c) => c.locales.includes(locale))) {
+      pages.push({
+        url: `${baseUrl}/${locale}/geo/${city.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
+  }
+  return pages;
+}
 
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.updatedAt,
-    changeFrequency: "monthly",
-    priority: 0.7,
-    alternates: alternateUrls(`/blog/${post.slug}`),
-  }));
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  let blogPages: MetadataRoute.Sitemap = [];
+
+  try {
+    const blogPosts = await prisma.blogPost.findMany({
+      where: { published: true },
+      select: { slug: true, updatedAt: true },
+    });
+
+    blogPages = blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.updatedAt,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: alternateUrls(`/blog/${post.slug}`),
+    }));
+  } catch {
+    // DB unavailable during build — skip blog entries
+  }
 
   return [
     ...staticPages,
     ...caseStudyPages,
     ...servicePages,
     ...blogPages,
+    ...geoPages(),
   ];
 }
