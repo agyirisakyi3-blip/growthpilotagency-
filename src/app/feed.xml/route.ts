@@ -1,13 +1,18 @@
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const posts = await prisma.blogPost.findMany({
-    where: { published: true },
-    orderBy: { createdAt: "desc" },
-    take: 50,
-  });
-
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://growthpilotagency.com";
+  let posts: { title: string; slug: string; excerpt: string; author: string; category: string; createdAt: Date }[] = [];
+
+  try {
+    posts = await prisma.blogPost.findMany({
+      where: { published: true },
+      orderBy: { createdAt: "desc" },
+      take: 50,
+    });
+  } catch {
+    // DB unavailable — return empty feed
+  }
 
   const items = posts
     .map(
