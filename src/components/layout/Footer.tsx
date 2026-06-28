@@ -29,6 +29,7 @@ export function Footer() {
   const companyLinks = [
     { label: t("companyLinks.about"), href: "/#about" },
     { label: t("companyLinks.team"), href: "/team" },
+    { label: t("companyLinks.pricing"), href: "/pricing" },
     { label: t("companyLinks.caseStudies"), href: "/case-studies" },
     { label: t("companyLinks.blog"), href: "/blog" },
     { label: t("companyLinks.contact"), href: "/contact" },

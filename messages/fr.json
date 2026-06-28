@@ -10,6 +10,7 @@
     "switchToLight": "Passer en mode clair",
     "switchToDark": "Passer en mode sombre",
     "openMenu": "Ouvrir le menu de navigation",
+    "pricing": "Tarifs",
     "closeMenu": "Fermer le menu de navigation",
     "home": "GrowthPilot Agency - Accueil"
   },
@@ -779,6 +780,7 @@
     "companyLinks": {
       "about": "À Propos",
       "team": "Équipe",
+      "pricing": "Tarifs",
       "caseStudies": "Études de Cas",
       "blog": "Blog",
       "contact": "Contact"
@@ -945,6 +947,62 @@
     "publishedOn": "Publié le",
     "categories": "Catégories",
     "noPosts": "Aucun article pour le moment. Revenez bientôt !"
+  },
+  "pricing": {
+    "metaTitle": "Tarifs",
+    "metaDescription": "Tarifs transparents pour le SEO & GEO, le design web, l'automatisation IA et la génération de leads. Choisissez le plan adapté à vos objectifs.",
+    "badge": "Tarifs",
+    "title": "Une Tarification",
+    "highlight": "Simple & Transparente",
+    "description": "Choisissez le plan qui correspond à vos besoins. Tous les prix sont en CFA (XOF). Sans frais cachés, résiliez à tout moment.",
+    "mostPopular": "Plus Populaire",
+    "cta": "Commencer",
+    "ctaContact": "Nous Contacter",
+    "month": "mois",
+    "plans": [
+      {
+        "name": "Démarrage",
+        "price": "150 000",
+        "description": "Parfait pour les petites entreprises prêtes à établir leur présence numérique.",
+        "features": [
+          "SEO & GEO de base (5 mots-clés)",
+          "Site web responsive 5 pages",
+          "Automatisation WhatsApp basique",
+          "Rapport mensuel de performance",
+          "Support par email"
+        ]
+      },
+      {
+        "name": "Croissance",
+        "price": "350 000",
+        "description": "Idéal pour les entreprises en croissance qui veulent passer à l'échelle supérieure.",
+        "features": [
+          "SEO & GEO avancé (15 mots-clés)",
+          "Site web 10 pages + blog",
+          "Automatisation WhatsApp & IA",
+          "Gestion des réseaux sociaux (3 plateformes)",
+          "Campagnes de génération de leads",
+          "Rapport bimensuel",
+          "Support prioritaire"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "750 000",
+        "description": "Pour les entreprises établies ayant besoin d'un écosystème de croissance complet.",
+        "features": [
+          "SEO & GEO complet (30+ mots-clés)",
+          "Site web personnalisé + CRM",
+          "Automatisation IA complète",
+          "Automatisation WhatsApp & SMS",
+          "Gestion des réseaux sociaux",
+          "Google Ads & PPC management",
+          "Gestion de réputation",
+          "Rapport hebdomadaire",
+          "Support dédié 24/7"
+        ]
+      }
+    ]
   },
   "cookie": {
     "message": "Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser notre trafic. En cliquant sur \"Accepter\", vous consentez à notre utilisation des cookies.",

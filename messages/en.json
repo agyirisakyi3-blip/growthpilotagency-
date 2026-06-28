@@ -10,6 +10,7 @@
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode",
     "openMenu": "Open navigation menu",
+    "pricing": "Pricing",
     "closeMenu": "Close navigation menu",
     "home": "GrowthPilot Agency - Home"
   },
@@ -592,6 +593,7 @@
     "companyLinks": {
       "about": "About",
       "team": "Team",
+      "pricing": "Pricing",
       "caseStudies": "Case Studies",
       "blog": "Blog",
       "contact": "Contact"
@@ -722,6 +724,62 @@
     "publishedOn": "Published on",
     "categories": "Categories",
     "noPosts": "No posts yet. Check back soon!"
+  },
+  "pricing": {
+    "metaTitle": "Pricing",
+    "metaDescription": "Transparent pricing for SEO & GEO, web design, AI automation, and lead generation services. Choose the plan that fits your business goals.",
+    "badge": "Pricing",
+    "title": "Simple, Transparent",
+    "highlight": "Pricing",
+    "description": "Choose the plan that fits your business. All prices are in CFA (XOF). No hidden fees, cancel anytime.",
+    "mostPopular": "Most Popular",
+    "cta": "Get Started",
+    "ctaContact": "Contact Us",
+    "month": "month",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "150 000",
+        "description": "Perfect for small businesses ready to establish their digital presence.",
+        "features": [
+          "SEO & GEO de base (5 keywords)",
+          "Site web responsive 5 pages",
+          "WhatsApp automation basique",
+          "Rapport mensuel de performance",
+          "Support email"
+        ]
+      },
+      {
+        "name": "Growth",
+        "price": "350 000",
+        "description": "Ideal for growing businesses looking to scale their online impact.",
+        "features": [
+          "SEO & GEO avancé (15 keywords)",
+          "Site web 10 pages + blog",
+          "WhatsApp & IA automation",
+          "Social media management (3 platforms)",
+          "Lead generation campaigns",
+          "Rapport bimensuel",
+          "Support prioritaire"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "750 000",
+        "description": "For established businesses needing a complete digital growth ecosystem.",
+        "features": [
+          "SEO & GEO complet (30+ keywords)",
+          "Site web personnalisé + CRM",
+          "IA automation complète",
+          "WhatsApp & SMS automation",
+          "Social media management",
+          "Google Ads & PPC management",
+          "Gestion de réputation",
+          "Rapport hebdomadaire",
+          "Support dédié 24/7"
+        ]
+      }
+    ]
   },
   "cookie": {
     "message": "We use cookies to enhance your browsing experience and analyze our traffic. By clicking \"Accept,\" you consent to our use of cookies.",
