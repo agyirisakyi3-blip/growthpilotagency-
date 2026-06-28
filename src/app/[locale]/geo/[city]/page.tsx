@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { cities, type City } from "@/data/cities";
+import { countries } from "@/data/countries";
 import { services } from "@/lib/constants";
-import { MapPin, CheckCircle2, ArrowRight } from "lucide-react";
+import { MapPin, Globe, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -140,6 +141,23 @@ export default async function CityPage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        {(() => {
+          const countrySlug = countries.find((c) => c.countryCode === city.countryCode)?.slug;
+          if (!countrySlug) return null;
+          const label = locale === "fr" ? `Voir tous les services au ${city.country}` : `View All Services in ${city.country}`;
+          return (
+            <div className="text-center mb-10">
+              <Button variant="outline" size="sm" className="gap-2" asChild>
+                <Link href={`/${locale}/geo/countries/${countrySlug}`}>
+                  <Globe size={14} />
+                  {label}
+                  <ArrowRight size={14} />
+                </Link>
+              </Button>
+            </div>
+          );
+        })()}
 
         <section className="mb-20">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-6 text-center">

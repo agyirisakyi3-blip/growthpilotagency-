@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { services } from "@/lib/constants";
 import { prisma } from "@/lib/prisma";
 import { cities } from "@/data/cities";
+import { countries } from "@/data/countries";
 
 const baseUrl = "https://growthpilotagency.com";
 const locales = ["en", "fr"] as const;
@@ -111,6 +112,21 @@ function geoPages(): MetadataRoute.Sitemap {
   return pages;
 }
 
+function countryPages(): MetadataRoute.Sitemap {
+  const pages: MetadataRoute.Sitemap = [];
+  for (const locale of locales) {
+    for (const country of countries.filter((c) => c.locales.includes(locale))) {
+      pages.push({
+        url: `${baseUrl}/${locale}/geo/countries/${country.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+      });
+    }
+  }
+  return pages;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogPages: MetadataRoute.Sitemap = [];
 
@@ -137,5 +153,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...servicePages,
     ...blogPages,
     ...geoPages(),
+    ...countryPages(),
   ];
 }
