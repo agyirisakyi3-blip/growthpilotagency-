@@ -8,6 +8,7 @@ import { ContactConfirmationEmail, NewLeadNotificationEmail } from "@/emails";
 import { verifySession } from "@/lib/admin-auth";
 import { contactFormSchema } from "@/lib/validations/email";
 import { checkServerActionRateLimit, sanitize } from "@/lib/rate-limit";
+import { createHubSpotContact } from "@/lib/hubspot";
 
 export async function submitContact(formData: FormData) {
   const raw = {
@@ -52,6 +53,14 @@ export async function submitContact(formData: FormData) {
     await Promise.allSettled([
       sendEmail({ to: email, subject: "We received your message - GrowthPilot Agency", html: userHtml }),
       sendEmail({ to: adminEmail, subject: `New Contact: ${subject} - ${name}`, html: adminHtml }),
+      createHubSpotContact({
+        name: clean.name,
+        email: clean.email,
+        phone: clean.phone || undefined,
+        company: clean.subject,
+        message: clean.message,
+        source: "contact-form",
+      }),
     ]);
 
     return {

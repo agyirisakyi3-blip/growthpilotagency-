@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -12,6 +13,7 @@ export function Testimonials() {
     role: string;
     company: string;
     content: string;
+    avatar?: string;
   }[];
   const headerRef = useRef<HTMLDivElement>(null);
   const headerInView = useInView(headerRef, { once: true, margin: "-50px" });
@@ -62,9 +64,15 @@ export function Testimonials() {
                   </p>
                 </blockquote>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary shrink-0">
-                    {item.name.split(" ").map((n) => n[0]).join("")}
-                  </div>
+                  {item.avatar ? (
+                    <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 relative">
+                      <Image src={item.avatar} alt={item.name} fill className="object-cover" sizes="40px" />
+                    </div>
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary shrink-0">
+                      {item.name.split(" ").map((n) => n[0]).join("")}
+                    </div>
+                  )}
                   <div>
                     <p className="font-semibold text-sm">{item.name}</p>
                     <p className="text-xs text-muted-foreground">

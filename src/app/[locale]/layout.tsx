@@ -10,7 +10,9 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { FacebookPixel } from "@/components/features/FacebookPixel";
+import { Analytics } from "@/components/features/Analytics";
 import { JsonLd } from "@/components/features/JsonLd";
+import { Toaster } from "sonner";
 import { ExitIntentPopup } from "@/components/features/ExitIntentPopup";
 import { SocialProof } from "@/components/features/SocialProof";
 import { LanguageSwitcher } from "@/components/features/LanguageSwitcher";
@@ -130,7 +132,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         </main>
         <Footer />
         <CookieConsent />
+        <Toaster position="bottom-right" richColors closeButton />
         <FacebookPixel />
+        <Analytics />
         <ExitIntentPopup />
         <SocialProof />
       </ThemeProvider>

@@ -662,25 +662,29 @@
         "name": "Sarah Mensah",
         "role": "Associée Gérante",
         "company": "Cabinet Mensah & Associés",
-        "content": "GrowthPilot Agency a transformé notre présence en ligne. Nos leads organiques ont augmenté de 400% en seulement 3 mois. Le ROI a été extraordinaire."
+        "content": "GrowthPilot Agency a transformé notre présence en ligne. Nos leads organiques ont augmenté de 400% en seulement 3 mois. Le ROI a été extraordinaire.",
+        "avatar": "/avatars/sarah.jpg"
       },
       {
         "name": "James Osei",
         "role": "PDG",
         "company": "Osei Courtiers en Assurance",
-        "content": "Le système d'automatisation WhatsApp qu'ils ont construit pour nous a révolutionné notre façon de gérer les demandes des clients. Nous répondons maintenant instantanément et concluons 3 fois plus d'affaires."
+        "content": "Le système d'automatisation WhatsApp qu'ils ont construit pour nous a révolutionné notre façon de gérer les demandes des clients. Nous répondons maintenant instantanément et concluons 3 fois plus d'affaires.",
+        "avatar": "/avatars/james.jpg"
       },
       {
         "name": "Dr. Amma Boateng",
         "role": "Directrice",
         "company": "Cliniques WellCare",
-        "content": "Nos réservations de patients ont doublé après la refonte SEO et le nouveau site web. L'équipe comprend le marketing de la santé à un niveau profond."
+        "content": "Nos réservations de patients ont doublé après la refonte SEO et le nouveau site web. L'équipe comprend le marketing de la santé à un niveau profond.",
+        "avatar": "/avatars/amma.jpg"
       },
       {
         "name": "Kwame Asare",
         "role": "Fondateur",
         "company": "Propriétés Asare",
-        "content": "De zéro à la page 1 sur Google pour des mots-clés immobiliers compétitifs en 60 jours. Un travail absolument phénoménal."
+        "content": "De zéro à la page 1 sur Google pour des mots-clés immobiliers compétitifs en 60 jours. Un travail absolument phénoménal.",
+        "avatar": "/avatars/kwame.jpg"
       }
     ]
   },

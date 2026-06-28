@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, User } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { useTranslations } from "next-intl";
@@ -49,6 +50,18 @@ export function BlogDetailContent({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
+          {post.image && (
+            <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-8 bg-muted">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
           <Badge variant="secondary" className="mb-4">{post.category}</Badge>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">{post.title}</h1>
 

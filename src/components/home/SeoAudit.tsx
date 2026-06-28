@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useTranslations } from "next-intl";
 import { submitLead } from "@/app/actions/leads";
+import { toast } from "sonner";
 
 export function SeoAudit() {
   const t = useTranslations("seoAudit");
@@ -35,9 +36,11 @@ export function SeoAudit() {
     if (result.success) {
       setState("success");
       setMessage(result.message || t("successMessage"));
+      toast.success(t("successMessage"));
     } else {
       setState("error");
       setMessage(result.message || "Something went wrong. Please try again.");
+      toast.error(result.message || "Something went wrong.");
       errorRef.current?.focus();
     }
   }

@@ -518,10 +518,10 @@
     "highlight": "Clients Say",
     "description": "Don't take our word for it. Here's what our clients have to say.",
     "list": [
-      { "name": "Sarah Mensah", "role": "Managing Partner", "company": "Mensah & Associates Law Firm", "content": "GrowthPilot Agency transformed our online presence. Our organic leads increased by 400% in just 3 months. The ROI has been extraordinary." },
-      { "name": "James Osei", "role": "CEO", "company": "Osei Insurance Brokers", "content": "The WhatsApp automation system they built for us revolutionized how we handle client inquiries. We now respond instantly and close 3x more deals." },
-      { "name": "Dr. Amma Boateng", "role": "Director", "company": "WellCare Clinics", "content": "Our patient bookings doubled after the SEO overhaul and new website. The team understands healthcare marketing at a deep level." },
-      { "name": "Kwame Asare", "role": "Founder", "company": "Asare Properties", "content": "From zero to page 1 on Google for competitive real estate keywords in 60 days. Absolutely phenomenal work." }
+      { "name": "Sarah Mensah", "role": "Managing Partner", "company": "Mensah & Associates Law Firm", "content": "GrowthPilot Agency transformed our online presence. Our organic leads increased by 400% in just 3 months. The ROI has been extraordinary.", "avatar": "/avatars/sarah.jpg" },
+      { "name": "James Osei", "role": "CEO", "company": "Osei Insurance Brokers", "content": "The WhatsApp automation system they built for us revolutionized how we handle client inquiries. We now respond instantly and close 3x more deals.", "avatar": "/avatars/james.jpg" },
+      { "name": "Dr. Amma Boateng", "role": "Director", "company": "WellCare Clinics", "content": "Our patient bookings doubled after the SEO overhaul and new website. The team understands healthcare marketing at a deep level.", "avatar": "/avatars/amma.jpg" },
+      { "name": "Kwame Asare", "role": "Founder", "company": "Asare Properties", "content": "From zero to page 1 on Google for competitive real estate keywords in 60 days. Absolutely phenomenal work.", "avatar": "/avatars/kwame.jpg" }
     ]
   },
   "about": {

@@ -8,6 +8,7 @@ import { NewLeadNotificationEmail } from "@/emails";
 import { verifySession } from "@/lib/admin-auth";
 import { leadSchema } from "@/lib/validations/email";
 import { checkServerActionRateLimit, sanitize } from "@/lib/rate-limit";
+import { createHubSpotContact, createHubSpotDeal } from "@/lib/hubspot";
 
 
 export async function submitLead(formData: FormData) {
@@ -65,6 +66,25 @@ export async function submitLead(formData: FormData) {
     }));
 
     await sendEmail({ to: adminEmail, subject: `New SEO & GEO Audit Lead: ${name} - ${company}`, html });
+
+    const contact = await createHubSpotContact({
+      name: clean.name,
+      email: clean.email,
+      phone: clean.phone || undefined,
+      company: clean.company,
+      website: clean.website || undefined,
+      message: clean.message,
+      source: "seo-audit",
+    });
+
+    if (contact) {
+      await createHubSpotDeal(contact.id, {
+        name: clean.name,
+        company: clean.company,
+        message: clean.message,
+        source: "seo-audit",
+      });
+    }
 
     return {
       success: true,

@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
 import { submitContact } from "@/app/actions/contact";
+import { toast } from "sonner";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
@@ -34,9 +35,11 @@ export default function ContactPage() {
     if (result.success) {
       setState("success");
       setMessage(result.message || t("successMessage"));
+      toast.success(t("successMessage"));
     } else {
       setState("error");
       setMessage(result.message || "Something went wrong.");
+      toast.error(result.message || "Something went wrong.");
       errorRef.current?.focus();
     }
   }

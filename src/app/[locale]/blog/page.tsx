@@ -2,7 +2,10 @@ import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { BlogListContent } from "./BlogListContent";
 
-type Props = { params: Promise<{ locale: string }> };
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ page?: string }>;
+};
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -15,6 +18,9 @@ export async function generateMetadata({ params }: Props) {
       languages: {
         en: "/en/blog",
         fr: "/fr/blog",
+      },
+      types: {
+        "application/rss+xml": "/feed.xml",
       },
     },
     openGraph: {
@@ -30,24 +36,42 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function BlogPage({ params }: Props) {
+export default async function BlogPage({ params, searchParams }: Props) {
   const { locale } = await params;
+  const { page: pageStr } = await searchParams;
 
-  const posts = await prisma.blogPost.findMany({
-    where: { published: true },
-    orderBy: { createdAt: "desc" },
-    select: {
-      title: true,
-      slug: true,
-      excerpt: true,
-      category: true,
-      image: true,
-      author: true,
-      createdAt: true,
-    },
-  });
+  const page = Math.max(1, Number(pageStr) || 1);
+  const perPage = 9;
 
-  return <BlogListContent posts={posts} locale={locale} />;
+  const [posts, total] = await Promise.all([
+    prisma.blogPost.findMany({
+      where: { published: true },
+      orderBy: { createdAt: "desc" },
+      skip: (page - 1) * perPage,
+      take: perPage,
+      select: {
+        title: true,
+        slug: true,
+        excerpt: true,
+        category: true,
+        image: true,
+        author: true,
+        createdAt: true,
+      },
+    }),
+    prisma.blogPost.count({ where: { published: true } }),
+  ]);
+
+  const totalPages = Math.max(1, Math.ceil(total / perPage));
+
+  return (
+    <BlogListContent
+      posts={posts}
+      locale={locale}
+      currentPage={page}
+      totalPages={totalPages}
+    />
+  );
 }
 
 export const revalidate = 3600;

@@ -5,14 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Users, Trash2, Download, RefreshCw, Search, Eye,
   Mail, LogOut, Lock, TrendingUp, Inbox, Send, AlertTriangle,
-  X, Menu, LayoutDashboard, Calendar, ChevronRight, Bell, MessageSquare,
+  X, Menu, LayoutDashboard, Calendar, ChevronRight, Bell, MessageSquare, FileText, Briefcase,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 import Link from "next/link";
-import { getLeads, deleteLead } from "@/app/actions/leads";
+import { getLeads, deleteLead, updateLeadStatus } from "@/app/actions/leads";
 import { getContacts, deleteContact } from "@/app/actions/contact";
 import { getSubscribers, deleteSubscriber, getEmailLogs, deleteEmailLog } from "@/app/actions/admin";
 import type { Lead, ContactSubmission, Subscriber, EmailLog } from "@/lib/types";
@@ -235,8 +236,10 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [activeTab, setActiveTab] = useState<TabView>("leads");
+  const [statusFilter, setStatusFilter] = useState<string>("all");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState<{ type: TabView; id: string } | null>(null);
+  const [updatingLead, setUpdatingLead] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -279,10 +282,10 @@ export default function AdminPage() {
   function handleDelete() {
     if (!confirmDelete) return;
     const { type, id } = confirmDelete;
-    if (type === "leads") deleteLead(id).then((r) => { if (r.success) setData((d) => ({ ...d, leads: d.leads.filter((l) => l.id !== id) })); });
-    else if (type === "contacts") deleteContact(id).then((r) => { if (r.success) setData((d) => ({ ...d, contacts: d.contacts.filter((c) => c.id !== id) })); });
-    else if (type === "subscribers") deleteSubscriber(id).then((r) => { if (r.success) setData((d) => ({ ...d, subscribers: d.subscribers.filter((s) => s.id !== id) })); });
-    else if (type === "email-logs") deleteEmailLog(id).then((r) => { if (r.success) setData((d) => ({ ...d, emailLogs: d.emailLogs.filter((l) => l.id !== id) })); });
+    if (type === "leads") deleteLead(id).then((r) => { if (r.success) { setData((d) => ({ ...d, leads: d.leads.filter((l) => l.id !== id) })); toast.success("Lead deleted"); } else { toast.error("Failed to delete lead"); } });
+    else if (type === "contacts") deleteContact(id).then((r) => { if (r.success) { setData((d) => ({ ...d, contacts: d.contacts.filter((c) => c.id !== id) })); toast.success("Message deleted"); } else { toast.error("Failed to delete message"); } });
+    else if (type === "subscribers") deleteSubscriber(id).then((r) => { if (r.success) { setData((d) => ({ ...d, subscribers: d.subscribers.filter((s) => s.id !== id) })); toast.success("Subscriber deleted"); } else { toast.error("Failed to delete subscriber"); } });
+    else if (type === "email-logs") deleteEmailLog(id).then((r) => { if (r.success) { setData((d) => ({ ...d, emailLogs: d.emailLogs.filter((l) => l.id !== id) })); toast.success("Log deleted"); } else { toast.error("Failed to delete log"); } });
     setConfirmDelete(null);
   }
 
@@ -293,7 +296,10 @@ export default function AdminPage() {
   }
 
   const q = search;
-  const filteredLeads = filtered(data.leads, ["name", "email", "company", "phone", "website", "source"], q);
+  const filteredLeads = filtered(
+    statusFilter === "all" ? data.leads : data.leads.filter((l) => l.status === statusFilter),
+    ["name", "email", "company", "phone", "website", "source"], q,
+  );
   const filteredContacts = filtered(data.contacts, ["name", "email", "subject", "phone"], q);
   const filteredSubs = filtered(data.subscribers, ["email", "source"], q);
   const filteredLogs = filtered(data.emailLogs, ["recipient", "subject", "status", "type"], q);
@@ -345,7 +351,21 @@ export default function AdminPage() {
             </button>
           );
         })}
-        <div className="pt-2 mt-2 border-t border-border">
+        <div className="pt-2 mt-2 border-t border-border space-y-0.5">
+          <Link
+            href="/admin/blog"
+            className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-accent hover:text-foreground transition-all"
+          >
+            <FileText size={16} />
+            <span>Blog Posts</span>
+          </Link>
+          <Link
+            href="/admin/case-studies"
+            className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-accent hover:text-foreground transition-all"
+          >
+            <Briefcase size={16} />
+            <span>Case Studies</span>
+          </Link>
           <Link
             href="/admin/whatsapp"
             className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-[#25D366]/10 hover:text-[#25D366] transition-all"
@@ -370,60 +390,110 @@ export default function AdminPage() {
   function renderTable() {
     if (activeTab === "leads") {
       if (!filteredLeads.length) return <EmptyState icon={TrendingUp} title="No leads yet" description="Leads from your website forms will appear here." />;
+      const statuses = ["all", "new", "contacted", "qualified", "converted", "lost"];
+      const statusCounts: Record<string, number> = {};
+      data.leads.forEach((l) => { statusCounts[l.status] = (statusCounts[l.status] || 0) + 1; });
       return (
-        <div className="overflow-x-auto -mx-4 sm:-mx-0">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="text-left text-muted-foreground border-b border-border">
-                <th className="pb-3 font-medium text-xs tracking-wider uppercase pl-4 sm:pl-0">Name</th>
-                <th className="pb-3 font-medium text-xs tracking-wider uppercase hidden sm:table-cell">Contact</th>
-                <th className="pb-3 font-medium text-xs tracking-wider uppercase hidden md:table-cell">Company</th>
-                <th className="pb-3 font-medium text-xs tracking-wider uppercase">Status</th>
-                <th className="pb-3 font-medium text-xs tracking-wider uppercase hidden lg:table-cell pr-4 sm:pr-0">Date</th>
-                <th className="pb-3 w-10 pr-4 sm:pr-0"></th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredLeads.map((lead) => (
-                <tr key={lead.id} className="border-b border-border/50 group hover:bg-accent/30 transition-colors">
-                  <td className="py-2.5 pl-4 sm:pl-0">
-                    <p className="font-medium text-sm">{lead.name}</p>
-                    <span className="text-xs text-muted-foreground sm:hidden">{lead.email}</span>
-                  </td>
-                  <td className="py-2.5 hidden sm:table-cell">
-                    <p className="text-sm">{lead.email}</p>
-                    <p className="text-xs text-muted-foreground">{lead.phone}</p>
-                  </td>
-                  <td className="py-2.5 hidden md:table-cell">
-                    <p className="text-sm">{lead.company}</p>
-                    {lead.website && (
-                      <a href={lead.website} target="_blank" rel="noopener noreferrer" className="text-xs text-primary/70 hover:text-primary">
-                        {lead.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                      </a>
-                    )}
-                  </td>
-                  <td className="py-2.5">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-medium">
-                      <StatusDot status={lead.status} />
-                      {lead.status.charAt(0).toUpperCase() + lead.status.slice(1)}
-                    </span>
-                  </td>
-                  <td className="py-2.5 hidden lg:table-cell">
-                    <p className="text-xs text-muted-foreground">{fullDate(lead.createdAt)}</p>
-                    <p className="text-[11px] text-muted-foreground/60">via {lead.source}</p>
-                  </td>
-                  <td className="py-2.5 pr-4 sm:pr-0">
-                    <button
-                      onClick={() => setConfirmDelete({ type: "leads", id: lead.id })}
-                      className="p-1.5 rounded-md text-muted-foreground/40 hover:text-red-500 hover:bg-red-500/10 opacity-0 group-hover:opacity-100 transition-all"
-                    >
-                      <Trash2 size={13} />
-                    </button>
-                  </td>
+        <div>
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {statuses.map((s) => (
+              <button
+                key={s}
+                onClick={() => setStatusFilter(s)}
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-all ${
+                  statusFilter === s
+                    ? "bg-foreground text-background shadow-sm"
+                    : s === "all" ? "text-muted-foreground hover:bg-accent"
+                    : `text-muted-foreground hover:bg-accent`
+                }`}
+              >
+                {s === "all" ? "All" : s.charAt(0).toUpperCase() + s.slice(1)}
+                {s !== "all" && (
+                  <span className={`text-[10px] ${statusFilter === s ? "opacity-70" : "text-muted-foreground/50"}`}>
+                    {statusCounts[s] || 0}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+          <div className="overflow-x-auto -mx-4 sm:-mx-0">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-muted-foreground border-b border-border">
+                  <th className="pb-3 font-medium text-xs tracking-wider uppercase pl-4 sm:pl-0">Name</th>
+                  <th className="pb-3 font-medium text-xs tracking-wider uppercase hidden sm:table-cell">Contact</th>
+                  <th className="pb-3 font-medium text-xs tracking-wider uppercase hidden md:table-cell">Company</th>
+                  <th className="pb-3 font-medium text-xs tracking-wider uppercase">Status</th>
+                  <th className="pb-3 font-medium text-xs tracking-wider uppercase hidden lg:table-cell pr-4 sm:pr-0">Date</th>
+                  <th className="pb-3 w-10 pr-4 sm:pr-0"></th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {filteredLeads.map((lead) => (
+                  <tr key={lead.id} className="border-b border-border/50 group hover:bg-accent/30 transition-colors">
+                    <td className="py-2.5 pl-4 sm:pl-0">
+                      <p className="font-medium text-sm">{lead.name}</p>
+                      <span className="text-xs text-muted-foreground sm:hidden">{lead.email}</span>
+                    </td>
+                    <td className="py-2.5 hidden sm:table-cell">
+                      <p className="text-sm">{lead.email}</p>
+                      <p className="text-xs text-muted-foreground">{lead.phone}</p>
+                    </td>
+                    <td className="py-2.5 hidden md:table-cell">
+                      <p className="text-sm">{lead.company}</p>
+                      {lead.website && (
+                        <a href={lead.website} target="_blank" rel="noopener noreferrer" className="text-xs text-primary/70 hover:text-primary">
+                          {lead.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                        </a>
+                      )}
+                    </td>
+                    <td className="py-2.5">
+                      <select
+                        value={lead.status}
+                        onChange={async (e) => {
+                          setUpdatingLead(lead.id);
+                          const res = await updateLeadStatus(lead.id, e.target.value);
+                          if (res.success) {
+                            setData((d) => ({
+                              ...d,
+                              leads: d.leads.map((l) => l.id === lead.id ? { ...l, status: e.target.value } : l),
+                            }));
+                            toast.success(`Status updated to ${e.target.value}`);
+                          } else {
+                            toast.error("Failed to update status");
+                          }
+                          setUpdatingLead(null);
+                        }}
+                        disabled={updatingLead === lead.id}
+                        className={`inline-flex items-center gap-1.5 rounded-md text-xs font-medium border-0 bg-transparent cursor-pointer appearance-none focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:opacity-50 ${
+                          updatingLead === lead.id ? "animate-pulse" : ""
+                        } ${lead.status === "new" ? "text-blue-600" : lead.status === "contacted" ? "text-amber-600" : lead.status === "qualified" ? "text-emerald-600" : lead.status === "converted" ? "text-violet-600" : "text-neutral-500"}`}
+                        style={{ padding: "2px 16px 2px 0", backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: "right 2px center", backgroundRepeat: "no-repeat", backgroundSize: "14px" }}
+                      >
+                        <option value="new">New</option>
+                        <option value="contacted">Contacted</option>
+                        <option value="qualified">Qualified</option>
+                        <option value="converted">Converted</option>
+                        <option value="lost">Lost</option>
+                      </select>
+                    </td>
+                    <td className="py-2.5 hidden lg:table-cell">
+                      <p className="text-xs text-muted-foreground">{fullDate(lead.createdAt)}</p>
+                      <p className="text-[11px] text-muted-foreground/60">via {lead.source}</p>
+                    </td>
+                    <td className="py-2.5 pr-4 sm:pr-0">
+                      <button
+                        onClick={() => setConfirmDelete({ type: "leads", id: lead.id })}
+                        className="p-1.5 rounded-md text-muted-foreground/40 hover:text-red-500 hover:bg-red-500/10 opacity-0 group-hover:opacity-100 transition-all"
+                      >
+                        <Trash2 size={13} />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       );
     }

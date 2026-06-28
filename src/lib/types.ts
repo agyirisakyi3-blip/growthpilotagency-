@@ -44,7 +44,7 @@ export interface CaseStudy {
   challenge: string;
   solution: string;
   results: string;
-  metrics: Record<string, string>;
+  metrics: string | Record<string, string>;
   image: string;
   published: boolean;
   createdAt: Date;
