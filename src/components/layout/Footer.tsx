@@ -45,18 +45,18 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0b1628] border-t border-white/[0.06]" role="contentinfo">
+    <footer className="bg-[#0a0f1e] border-t border-white/[0.06]" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-2 lg:col-span-2">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 mb-4 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded-lg"
+              className="inline-flex items-center gap-2.5 mb-4 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded-lg"
               aria-label="GrowthPilot Agency - Home"
             >
               <Logo />
               <span className="font-semibold text-lg text-white">
-                GrowthPilot<span className="text-[#f5a623]">Agency</span>
+                GrowthPilot<span className="text-[#3b82f6]">Agency</span>
               </span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-sm mb-6">
@@ -189,15 +189,15 @@ export function Footer() {
             <h4 className="font-semibold text-sm text-white mb-4">{p("title")}</h4>
             <ul className="flex flex-col gap-2 text-sm text-white/50">
               <li className="flex items-center gap-2">
-                <Smartphone size={14} className="text-[#f5a623] shrink-0" />
+                <Smartphone size={14} className="text-[#3b82f6] shrink-0" />
                 {p("mobileMoney")}
               </li>
               <li className="flex items-center gap-2">
-                <CreditCard size={14} className="text-[#f5a623] shrink-0" />
+                <CreditCard size={14} className="text-[#3b82f6] shrink-0" />
                 {p("card")}
               </li>
               <li className="flex items-center gap-2">
-                <Building2 size={14} className="text-[#f5a623] shrink-0" />
+                <Building2 size={14} className="text-[#3b82f6] shrink-0" />
                 {p("bank")}
               </li>
             </ul>

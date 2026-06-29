@@ -9,6 +9,7 @@ const Results = dynamic(() => import("@/components/home/Results").then((m) => ({
 const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs").then((m) => ({ default: m.WhyChooseUs })));
 const Industries = dynamic(() => import("@/components/home/Industries").then((m) => ({ default: m.Industries })));
 const CaseStudies = dynamic(() => import("@/components/home/CaseStudies").then((m) => ({ default: m.CaseStudies })));
+const LatestBlogPosts = dynamic(() => import("@/components/home/LatestBlogPosts").then((m) => ({ default: m.LatestBlogPosts })));
 const SeoAudit = dynamic(() => import("@/components/home/SeoAudit").then((m) => ({ default: m.SeoAudit })));
 const Testimonials = dynamic(() => import("@/components/home/Testimonials").then((m) => ({ default: m.Testimonials })));
 const About = dynamic(() => import("@/components/home/About").then((m) => ({ default: m.About })));
@@ -39,7 +40,8 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return (
     <>
       <Hero />
@@ -50,6 +52,7 @@ export default function Home() {
       <WhyChooseUs />
       <Industries />
       <CaseStudies />
+      <LatestBlogPosts locale={locale} />
       <SeoAudit />
       <Testimonials />
       <About />

@@ -2,10 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { Menu, X, Moon, Sun, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
-import { useTheme } from "@/components/layout/ThemeProvider";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
 import { usePathname } from "@/i18n/routing";
@@ -14,17 +13,14 @@ import { useTranslations } from "next-intl";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations("nav");
 
-  const isHome = pathname === "/en" || pathname === "/fr" || pathname === "/";
-
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 80);
+    setScrolled(latest > 40);
   });
 
   const navLinks = [
@@ -41,17 +37,14 @@ export function Navbar() {
 
   useEffect(() => {
     if (!mobileOpen) return;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setMobileOpen(false);
         toggleRef.current?.focus();
       }
     };
-
     document.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
@@ -62,29 +55,25 @@ export function Navbar() {
     setMobileOpen(false);
   }, []);
 
-  const darkMode = isHome && !scrolled;
-
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-xs"
-          : darkMode
-            ? "bg-transparent"
-            : "bg-background/80 backdrop-blur-xl border-b border-border shadow-xs"
+          ? "bg-[#0a0f1e]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/10"
+          : "bg-transparent"
       )}
       role="banner"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[72px]">
         <Link
           href="/"
-          className="flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded-lg"
-          aria-label={t("home")}
+          className="flex items-center gap-2.5 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 rounded-lg"
+          aria-label="GrowthPilot Agency - Home"
         >
           <Logo />
-          <span className={cn("font-semibold text-lg tracking-tight", darkMode ? "text-white" : "")}>
-            GrowthPilot<span className={cn(darkMode ? "text-[#f5a623]" : "text-primary")}>Agency</span>
+          <span className="font-semibold text-lg tracking-tight text-white">
+            GrowthPilot<span className="text-[#3b82f6]">Agency</span>
           </span>
         </Link>
 
@@ -96,39 +85,17 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={cn(
-                "px-4 py-2.5 text-sm transition-colors rounded-lg",
-                darkMode
-                  ? "text-white/70 hover:text-white hover:bg-white/[0.06]"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              )}
+              className="px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/[0.06] transition-colors rounded-lg"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <button
-            onClick={toggleTheme}
-            className={cn(
-              "p-2.5 rounded-lg transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center",
-              darkMode
-                ? "text-white/70 hover:text-white hover:bg-white/[0.06]"
-                : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-            )}
-            aria-label={theme === "dark" ? t("switchToLight") : t("switchToDark")}
-          >
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-
+        <div className="flex items-center gap-3">
           <Button
-            variant="accent"
-            size="default"
-            className={cn(
-              "hidden sm:inline-flex gap-2",
-              darkMode ? "bg-[#f5a623] text-[#0b1628] hover:bg-[#e0981f]" : ""
-            )}
+            size="sm"
+            className="hidden sm:inline-flex gap-2 bg-[#3b82f6] text-white hover:bg-[#2563eb] shadow-lg shadow-[#3b82f6]/20"
             asChild
           >
             <Link href="/contact">
@@ -140,12 +107,7 @@ export function Navbar() {
           <button
             ref={toggleRef}
             onClick={() => setMobileOpen(true)}
-            className={cn(
-              "md:hidden p-2.5 rounded-lg transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center",
-              darkMode
-                ? "text-white/70 hover:text-white hover:bg-white/[0.06]"
-                : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-            )}
+            className="md:hidden p-2.5 rounded-lg text-white/70 hover:text-white hover:bg-white/[0.06] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label={t("openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
@@ -167,22 +129,22 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-60 bg-background md:hidden"
+            className="fixed inset-0 z-60 bg-[#0a0f1e] md:hidden"
           >
-            <div className="flex items-center justify-between p-4 border-b border-border">
+            <div className="flex items-center justify-between p-4 border-b border-white/[0.06]">
               <Link
                 href="/"
                 className="flex items-center gap-2"
                 onClick={closeMenu}
               >
                 <Logo />
-                <span className="font-semibold text-lg">
-                  GrowthPilot<span className="text-primary">Agency</span>
+                <span className="font-semibold text-lg text-white">
+                  GrowthPilot<span className="text-[#3b82f6]">Agency</span>
                 </span>
               </Link>
               <button
                 onClick={closeMenu}
-                className="p-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-2.5 rounded-lg text-white/50 hover:text-white hover:bg-white/[0.06] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-label={t("closeMenu")}
                 autoFocus
               >
@@ -195,16 +157,15 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className="px-4 py-3.5 text-lg text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+                  className="px-4 py-3.5 text-lg text-white/60 hover:text-white hover:bg-white/[0.06] rounded-lg transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-4 pt-4 border-t border-border">
+              <div className="mt-4 pt-4 border-t border-white/[0.06]">
                 <Button
-                  variant="accent"
                   size="lg"
-                  className="w-full gap-2 min-h-[48px]"
+                  className="w-full gap-2 min-h-[48px] bg-[#3b82f6] text-white hover:bg-[#2563eb]"
                   asChild
                 >
                   <Link href="/contact" onClick={closeMenu}>

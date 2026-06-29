@@ -30,12 +30,12 @@ export function Services() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <p className="text-sm font-medium text-[#f5a623] mb-3 tracking-wide uppercase">
+          <p className="text-sm font-medium text-[#3b82f6] mb-3 tracking-wide uppercase">
             {t("badge")}
           </p>
           <h2 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 max-w-2xl">
             {t("title")}{" "}
-            <span className="text-[#f5a623]">{t("highlight")}</span>
+            <span className="bg-gradient-to-r from-[#3b82f6] to-[#46c4ff] bg-clip-text text-transparent">{t("highlight")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl">
             {t("description")}
