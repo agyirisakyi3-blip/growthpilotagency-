@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [480, 768, 1024, 1280, 1536],
     minimumCacheTTL: 60 * 60 * 24 * 30,
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "**.unsplash.com" },
+    ],
   },
   experimental: {
     serverActions: {
